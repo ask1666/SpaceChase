@@ -21,9 +21,19 @@ public class Gun : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate() {
         gunCooldownTimer += Time.deltaTime;
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up);
-        
-        
+
+        Debug.DrawRay(new Vector2(transform.position.x + 0.52f, transform.position.y + 0.7f), Vector2.up * beamRange, Color.green);
+
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x + 0.52f, transform.position.y + 0.7f), Vector2.up * beamRange);
+
+        if ((hit.collider != null && hit.collider.gameObject.tag == "Asteroid") && lr.enabled == true) {
+            
+                hit.collider.gameObject.GetComponent<AsteroidExplosion>().explode = true;
+                
+            
+        }
+
+
     }
 
     IEnumerator doBeam() {
@@ -38,8 +48,10 @@ public class Gun : MonoBehaviour {
 
     }
 
+    /**
+     * When you shoot the doBeam() is called, and the cooldownTimer is reset.
+     */
     public void OnClick() {
-        Debug.Log(gunCooldownTimer);
         if (gunCooldownTimer > gunCooldown) {
             StartCoroutine(doBeam());
             shoot = false;

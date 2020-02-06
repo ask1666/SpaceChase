@@ -36,21 +36,21 @@ public class PlayerController : MonoBehaviour {
 
     public void OnLeftBtnDown() {
         moveLeft = true;
-        Debug.Log("Left down");
+        
     }
 
     public void OnLeftBtnUp() {
         moveLeft = false;
-        Debug.Log("Left up");
+        
     }
 
     public void OnRightBtnDown() {
         moveRight = true;
-        Debug.Log("Right down");
+        
     }
 
     public void OnRightBtnUp() {
         moveRight = false;
-        Debug.Log("Right up");
+        
     }
 }
