@@ -20,6 +20,6 @@ public class SceneManage : MonoBehaviour
     }
 
     public void ChangeScene(string sceneName) {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(sceneName);
     }
 }
