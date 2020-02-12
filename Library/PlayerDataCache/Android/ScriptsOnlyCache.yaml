@@ -106,8 +106,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
     - Class: 58
@@ -120,8 +118,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 109
-      Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11172}
     - Class: 114
@@ -133,15 +129,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11808}
     - Class: 114
-      Script: {instanceID: 11836}
-    - Class: 114
       Script: {instanceID: 12090}
     - Class: 114
       Script: {instanceID: 12230}
-    - Class: 114
-      Script: {instanceID: 12468}
-    - Class: 114
-      Script: {instanceID: 12482}
     - Class: 114
       Script: {instanceID: 12660}
     - Class: 114
@@ -149,11 +139,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12772}
     - Class: 114
-      Script: {instanceID: 12950}
-    - Class: 114
       Script: {instanceID: 13010}
-    - Class: 114
-      Script: {instanceID: 13068}
     - Class: 114
       Script: {instanceID: 13136}
     - Class: 114
@@ -173,6 +159,69 @@ ScriptsOnlyBuild:
     - Class: 199
       Script: {instanceID: 0}
     - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/MainMenu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 109
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11172}
+    - Class: 114
+      Script: {instanceID: 11384}
+    - Class: 114
+      Script: {instanceID: 11528}
+    - Class: 114
+      Script: {instanceID: 11808}
+    - Class: 114
+      Script: {instanceID: 11836}
+    - Class: 114
+      Script: {instanceID: 12230}
+    - Class: 114
+      Script: {instanceID: 12468}
+    - Class: 114
+      Script: {instanceID: 12482}
+    - Class: 114
+      Script: {instanceID: 12696}
+    - Class: 114
+      Script: {instanceID: 12764}
+    - Class: 114
+      Script: {instanceID: 12950}
+    - Class: 114
+      Script: {instanceID: 13068}
+    - Class: 114
+      Script: {instanceID: 13176}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -845,6 +894,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
+  - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/DeathScreen.unity
   playerPath: C:/Users/geeky/Documents/UnityProjects/SpaceChase/build1.apk

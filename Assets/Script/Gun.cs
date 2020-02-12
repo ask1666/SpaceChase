@@ -26,11 +26,12 @@ public class Gun : MonoBehaviour {
 
         RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.up * beamRange);
 
-        if ((hit.collider != null && hit.collider.gameObject.tag == "Asteroid") && lr.enabled == true) {
-            
+        if (hit.collider != null) {
+            float distance = Mathf.Abs(hit.point.y - transform.position.y);
+            if (hit.collider.gameObject.tag == "Asteroid" && lr.enabled == true && distance <= beamRange) {
                 hit.collider.gameObject.GetComponent<AsteroidExplosion>().explode = true;
-                
-            
+                Debug.Log(hit.collider.gameObject);
+            }
         }
 
 

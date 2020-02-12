@@ -30,6 +30,7 @@ public class AsteroidExplosion : MonoBehaviour {
     IEnumerator doExplosion() {
 
         Destroy(graphic);
+        GetComponent<CircleCollider2D>().enabled = false;
         explosion.Play();
         yield return new WaitForSeconds(0.4f);
         Destroy(this.gameObject);
