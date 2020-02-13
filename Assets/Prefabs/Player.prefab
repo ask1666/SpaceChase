@@ -4959,7 +4959,7 @@ GameObject:
   - component: {fileID: 464138049058611783}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5077,7 +5077,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.024713697, y: -0.061783493}
@@ -5306,5 +5306,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fcb91bb35a39934a9c6730f9b4b5634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beamRange: 5
+  beamRange: 3
   gunCooldown: 1

@@ -20,7 +20,9 @@ public class AsteroidSpawn : MonoBehaviour {
 
         if (releaseAsteroidTimer > releaseAsteroidCooldoown) {
             Vector3 spawnPosition = new Vector3(Random.Range(-1.7f, 1.7f), 6.34f, 0);
-            Instantiate(asteroid, spawnPosition, Quaternion.identity);
+            GameObject asteroidSpawned = Instantiate(asteroid, spawnPosition, Quaternion.identity);
+            asteroidSpawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(0,8), ForceMode2D.Impulse);
+            asteroidSpawned.transform.localScale = Vector2.one * Random.Range(0.2f, 0.6f);
             releaseAsteroidTimer = Time.deltaTime;
         }
 

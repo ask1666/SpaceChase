@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour {
 
     private LineRenderer lr;
+    public Button shootBtn;
     public float beamRange;
     public static bool shoot = false;
     public float gunCooldown = 1f;
-    private float gunCooldownTimer = 0;
+    private float gunCooldownTimer = 1f;
 
     // Start is called before the first frame update
     void Start() {
@@ -32,6 +34,12 @@ public class Gun : MonoBehaviour {
                 hit.collider.gameObject.GetComponent<AsteroidExplosion>().explode = true;
                 Debug.Log(hit.collider.gameObject);
             }
+        }
+
+        if (gunCooldownTimer > gunCooldown) {
+            shootBtn.GetComponent<Button>().interactable = true;
+        } else {
+            shootBtn.GetComponent<Button>().interactable = false;
         }
 
 
