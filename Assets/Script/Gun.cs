@@ -24,9 +24,9 @@ public class Gun : MonoBehaviour {
     void FixedUpdate() {
         gunCooldownTimer += Time.deltaTime;
 
-        Debug.DrawRay(new Vector2(transform.position.x, transform.position.y), Vector2.up * beamRange, Color.green);
+        Debug.DrawRay(new Vector2(transform.position.x -0.09f, transform.position.y), Vector2.up * beamRange, Color.green);
 
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), Vector2.up * beamRange);
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 0.09f, transform.position.y), Vector2.up * beamRange);
 
         if (hit.collider != null) {
             float distance = Mathf.Abs(hit.point.y - transform.position.y);
@@ -48,8 +48,8 @@ public class Gun : MonoBehaviour {
     IEnumerator doBeam() {
 
         lr.enabled = true;
-        lr.SetPosition(0, new Vector2(transform.position.x, transform.position.y));
-        lr.SetPosition(1, new Vector2(transform.position.x, transform.position.y + beamRange));
+        lr.SetPosition(0, new Vector2(transform.position.x - 0.09f, transform.position.y));
+        lr.SetPosition(1, new Vector2(transform.position.x - 0.09f, transform.position.y + beamRange));
         yield return new WaitForSeconds(0.2f);
         lr.enabled = false;
         lr.SetPosition(1, transform.position);
