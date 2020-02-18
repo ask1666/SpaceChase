@@ -56,8 +56,8 @@ public class Score : MonoBehaviour {
         }
 
         score = timer;
-        scoreText.text = "" + Mathf.RoundToInt(score);
-        highScoreText.text = "" + highScore;
+        scoreText.text = "score:\n" + Mathf.RoundToInt(score);
+        highScoreText.text = "highScore:\n" + highScore;
 
 
 
