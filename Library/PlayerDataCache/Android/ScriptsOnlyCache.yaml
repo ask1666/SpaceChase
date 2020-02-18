@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - Gun
     - PlayerController
     - SceneManage
+    - Score
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -133,7 +134,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12230}
     - Class: 114
+      Script: {instanceID: 12468}
+    - Class: 114
       Script: {instanceID: 12660}
+    - Class: 114
+      Script: {instanceID: 12696}
     - Class: 114
       Script: {instanceID: 12764}
     - Class: 114
@@ -144,6 +149,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13136}
     - Class: 114
       Script: {instanceID: 13176}
+    - Class: 114
+      Script: {instanceID: 16824}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -892,6 +899,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: e3e46f68e2a58de931c0b282d6f0140a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Score
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
