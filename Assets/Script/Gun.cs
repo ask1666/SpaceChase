@@ -32,7 +32,6 @@ public class Gun : MonoBehaviour {
             float distance = Mathf.Abs(hit.point.y - transform.position.y);
             if (hit.collider.gameObject.tag == "Asteroid" && lr.enabled == true && distance <= beamRange) {
                 hit.collider.gameObject.GetComponent<AsteroidExplosion>().explode = true;
-                Debug.Log(hit.collider.gameObject);
             }
         }
 

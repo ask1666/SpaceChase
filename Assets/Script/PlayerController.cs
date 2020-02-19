@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
     public float speed = 0.01f;
     public bool moveLeft = false;
     public bool moveRight = false;
+    public bool blockPlayerControl = false;
     // Start is called before the first frame update
     void Start() {
 
@@ -19,16 +20,17 @@ public class PlayerController : MonoBehaviour {
          * if you touch the screen on the right the player will move to the right.
          * speed = the rate of speed the player will move at.
         */
+        
+            if (moveLeft) {
+                if (!blockPlayerControl)
+                this.gameObject.transform.Translate(Vector2.left * (Time.deltaTime * speed));
 
-        if (moveLeft) {
+            } else if (moveRight) {
+                if (!blockPlayerControl)
+                this.gameObject.transform.Translate(Vector2.right * (Time.deltaTime * speed));
 
-            this.gameObject.transform.Translate(Vector2.left * (Time.deltaTime * speed));
-
-        } else if (moveRight) {
-
-            this.gameObject.transform.Translate(Vector2.right * (Time.deltaTime * speed));
-
-        }
+            }
+        
 
     }
 
@@ -36,21 +38,21 @@ public class PlayerController : MonoBehaviour {
 
     public void OnLeftBtnDown() {
         moveLeft = true;
-        
+
     }
 
     public void OnLeftBtnUp() {
         moveLeft = false;
-        
+
     }
 
     public void OnRightBtnDown() {
         moveRight = true;
-        
+
     }
 
     public void OnRightBtnUp() {
         moveRight = false;
-        
+
     }
 }

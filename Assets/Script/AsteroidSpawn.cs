@@ -8,6 +8,7 @@ public class AsteroidSpawn : MonoBehaviour {
 
     private float releaseAsteroidTimer;
     public float releaseAsteroidCooldoown;
+    public bool dontSpawn = true;
 
     // Start is called before the first frame update
     void Start() {
