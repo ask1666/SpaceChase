@@ -37,12 +37,9 @@ public class IntroScript : MonoBehaviour {
         Player.applyRootMotion = false;
         SpaceShip.SetTrigger("SpaceShipIntroTrigger");
         Player.SetTrigger("playerIntroTrigger");
-        Debug.Log("PlayIntro0 " + Player);
         yield return new WaitForSeconds(2.2f);
-        Debug.Log("PlayIntro1 " + Player);
         playerJetPack.Play();
         yield return new WaitForSeconds(0.9f);
         Player.applyRootMotion = true;
-        Debug.Log("PlayIntro2 " + Player);
     }
 }
