@@ -19,16 +19,17 @@ public class Score : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-
-        scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
-        highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
-
+        if (SceneManager.GetActiveScene().name.Equals("Game")) {
+            scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
+            highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
+            SaveSystem.LoadPlayerData();
+        }
         GameObject[] gc = GameObject.FindGameObjectsWithTag("GameControl");
         if (gc.Length > 1) {
             Destroy(gc[1]);
         }
         DontDestroyOnLoad(this.gameObject);
-        SaveSystem.LoadPlayerData();
+        
     }
 
 
@@ -39,27 +40,27 @@ public class Score : MonoBehaviour {
         if (SceneManager.GetActiveScene().name.Equals("Game")) {
 
             timer = Time.timeSinceLevelLoad;
-        }
 
-        try {
-            if (scoreText == null) {
-                scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
-                highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
+
+            try {
+                if (scoreText == null) {
+                    scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
+                    highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
+                }
+            } catch (System.NullReferenceException) {
+
             }
-        } catch (System.NullReferenceException) {
+
+            if (score > highScore) {
+                highScore = Mathf.RoundToInt(score);
+
+            }
+
+            score = timer;
+            scoreText.text = "score:\n" + Mathf.RoundToInt(score);
+            highScoreText.text = "highScore:\n" + highScore;
 
         }
-
-        if (score > highScore) {
-            highScore = Mathf.RoundToInt(score);
-
-        }
-
-        score = timer;
-        scoreText.text = "score:\n" + Mathf.RoundToInt(score);
-        highScoreText.text = "highScore:\n" + highScore;
-
-
 
     }
 
