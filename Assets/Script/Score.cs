@@ -11,6 +11,7 @@ public class Score : MonoBehaviour {
 
     private TextMeshProUGUI scoreText;
     private TextMeshProUGUI highScoreText;
+    private TextMeshProUGUI cashText;
 
     public float score;
     private float timer;
@@ -19,11 +20,12 @@ public class Score : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        if (SceneManager.GetActiveScene().name.Equals("Game")) {
-            scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
-            highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
-            SaveSystem.LoadPlayerData();
-        }
+        
+        scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
+        highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
+        cashText = GameObject.Find("CashText").GetComponent<TextMeshProUGUI>();
+        SaveSystem.LoadPlayerData();
+        
         GameObject[] gc = GameObject.FindGameObjectsWithTag("GameControl");
         if (gc.Length > 1) {
             Destroy(gc[1]);
@@ -40,27 +42,29 @@ public class Score : MonoBehaviour {
         if (SceneManager.GetActiveScene().name.Equals("Game")) {
 
             timer = Time.timeSinceLevelLoad;
+        }
 
-
-            try {
-                if (scoreText == null) {
-                    scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
-                    highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
-                }
-            } catch (System.NullReferenceException) {
-
+        try {
+            if (scoreText == null) {
+                scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
+                highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
+                cashText = GameObject.Find("CashText").GetComponent<TextMeshProUGUI>();
             }
-
-            if (score > highScore) {
-                highScore = Mathf.RoundToInt(score);
-
-            }
-
-            score = timer;
-            scoreText.text = "score:\n" + Mathf.RoundToInt(score);
-            highScoreText.text = "highScore:\n" + highScore;
+        } catch (System.NullReferenceException) {
 
         }
+
+        if (score > highScore) {
+            highScore = Mathf.RoundToInt(score);
+
+        }
+
+        score = timer;
+        scoreText.text = "Score:\n" + Mathf.RoundToInt(score);
+        highScoreText.text = "HighScore:\n" + highScore;
+        cashText.text = "Cash:\n" + cash;
+
+        
 
     }
 

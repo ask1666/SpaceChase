@@ -31,8 +31,9 @@ public static class SaveSystem {
             GameObject gameControl = GameObject.Find("GameControl");
             GameObject gun = GameObject.Find("Gun");
             gameControl.GetComponent<Score>().highScore = data.highScore;
-            gun.GetComponent<Gun>().beamRange = data.gunRange;
-            gun.GetComponent<Gun>().gunCooldown = data.gunReloadTime;
+            gameControl.GetComponent<Score>().cash = data.cash;
+            GameObject.Find("GameControl").GetComponent<UpgradesProperties>().gunRange = data.gunRange;
+            GameObject.Find("GameControl").GetComponent<UpgradesProperties>().gunCooldown = data.gunReloadTime;
 
 
         } else {

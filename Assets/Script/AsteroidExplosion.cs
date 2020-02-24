@@ -41,8 +41,8 @@ public class AsteroidExplosion : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag.Equals("Player")) {
             Score score = GameObject.Find("GameControl").GetComponent<Score>();
-            Gun gun = GameObject.Find("Gun").GetComponent<Gun>();
-            PlayerData playerData = new PlayerData(score.highScore, gun.gunCooldown, gun.beamRange, score.cash);
+            UpgradesProperties UP = GameObject.Find("GameControl").GetComponent<UpgradesProperties>();
+            PlayerData playerData = new PlayerData(score.highScore, UP.gunCooldown, UP.gunRange, score.cash);
             SaveSystem.SavePlayerData(playerData);
             SceneManager.LoadScene("DeathScreen");
         }

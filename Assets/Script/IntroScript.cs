@@ -15,13 +15,16 @@ public class IntroScript : MonoBehaviour {
         SpaceShip = GameObject.Find("SpaceShip").GetComponent<Animator>();
         Player = GameObject.Find("Player").GetComponent<Animator>();
         playerJetPack = GameObject.Find("JetPack").GetComponent<ParticleSystem>();
-        AsteroidSpawn asteroidSpawner = GameObject.Find("AsteroidSpawner").GetComponent<AsteroidSpawn>();
+        AsteroidSpawn asteroidSpawner = GameObject.Find("Spawner").GetComponent<AsteroidSpawn>();
+        PowerUpSpawner powerUpSpawner = GameObject.Find("Spawner").GetComponent<PowerUpSpawner>();
         PlayerController playercontroller = GameObject.Find("Player").GetComponent<PlayerController>();
         asteroidSpawner.dontSpawn = true;
+        powerUpSpawner.dontSpawn = true;
         playercontroller.blockPlayerControl = true;
 
         StartCoroutine(StartIntro());
         asteroidSpawner.dontSpawn = false;
+        powerUpSpawner.dontSpawn = false;
         playercontroller.blockPlayerControl = false;
 
     }

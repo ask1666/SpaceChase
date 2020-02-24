@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Asteroid
   - GameControl
+  - Coin
+  - Fuel
+  - Ammo
   layers:
   - Default
   - TransparentFX
