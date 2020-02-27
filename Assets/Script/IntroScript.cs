@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
+/**
+ * Class for handling intro animation etc.
+ */
 public class IntroScript : MonoBehaviour {
 
     private Animator SpaceShip;
     private Animator Player;
     private ParticleSystem playerJetPack;
 
-    // Start is called before the first frame update
     void Start() {
         Time.timeScale = 1;
         SpaceShip = GameObject.Find("SpaceShip").GetComponent<Animator>();
@@ -26,11 +28,6 @@ public class IntroScript : MonoBehaviour {
         asteroidSpawner.dontSpawn = false;
         powerUpSpawner.dontSpawn = false;
         playercontroller.blockPlayerControl = false;
-
-    }
-
-    // Update is called once per frame
-    void Update() {
 
     }
 

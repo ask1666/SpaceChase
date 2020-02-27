@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/**
+ * Class for handling death of asteroids.
+ */
 public class AsteroidExplosion : MonoBehaviour {
 
     public bool explode;

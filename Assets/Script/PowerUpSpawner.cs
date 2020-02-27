@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Class for spawning powerups.
+ */
 public class PowerUpSpawner : MonoBehaviour {
 
     public GameObject coin;

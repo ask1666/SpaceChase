@@ -5,6 +5,9 @@ using System.Numerics;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
+/**
+ * Class for handling saving and loading playerdata.
+ */
 public static class SaveSystem {
     public static void SavePlayerData(PlayerData data) {
 

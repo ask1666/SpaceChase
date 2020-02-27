@@ -5,9 +5,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/**
+ * Class for handling score and cash.
+ */
 public class Score : MonoBehaviour {
-
-
 
     private TextMeshProUGUI scoreText;
     private TextMeshProUGUI highScoreText;
@@ -19,8 +20,7 @@ public class Score : MonoBehaviour {
     public int cash;
 
     private void Awake() {
-        
-        
+
         DontDestroyOnLoad(this.gameObject);
 
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
@@ -28,7 +28,6 @@ public class Score : MonoBehaviour {
         cashText = GameObject.Find("CashText").GetComponent<TextMeshProUGUI>();
         SaveSystem.LoadPlayerData();
 
-        
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
@@ -40,14 +39,10 @@ public class Score : MonoBehaviour {
                 }
             }
 
-            //SaveSystem.LoadPlayerData();
-
         }
     }
 
 
-
-    // Update is called once per frame
     void Update() {
         SceneManager.sceneLoaded += OnSceneLoaded;
         if (SceneManager.GetActiveScene().name.Equals("Game")) {
@@ -75,7 +70,7 @@ public class Score : MonoBehaviour {
         highScoreText.text = "HighScore:\n" + highScore;
         cashText.text = "Cash:\n" + cash;
 
-        
+
 
     }
 

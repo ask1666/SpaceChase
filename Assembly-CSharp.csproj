@@ -63,7 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\AsteroidDestruction.cs" />
+    <Compile Include="Assets\Script\AsteroidDestroyer.cs" />
     <Compile Include="Assets\Script\AsteroidExplosion.cs" />
     <Compile Include="Assets\Script\AsteroidSpawn.cs" />
     <Compile Include="Assets\Script\Gun.cs" />
@@ -76,8 +76,7 @@
     <Compile Include="Assets\Script\SaveSystem.cs" />
     <Compile Include="Assets\Script\SceneManage.cs" />
     <Compile Include="Assets\Script\Score.cs" />
-    <Compile Include="Assets\Script\ShootBtn.cs" />
-    <Compile Include="Assets\Script\UpgradesDoIt.cs" />
+    <Compile Include="Assets\Script\UpgradesOnClick.cs" />
     <Compile Include="Assets\Script\UpgradesProperties.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

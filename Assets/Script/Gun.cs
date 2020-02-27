@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
+/**
+ * Class for handling shooting etc.
+ */
 public class Gun : MonoBehaviour {
 
     private LineRenderer lr;
@@ -14,13 +17,10 @@ public class Gun : MonoBehaviour {
     public float gunCooldown = 1f;
     private float gunCooldownTimer = 1f;
 
-    // Start is called before the first frame update
     void Start() {
         lr = gameObject.GetComponent<LineRenderer>();
-        
     }
 
-    // Update is called once per frame
     void FixedUpdate() {
         gunCooldownTimer += Time.deltaTime;
 
@@ -41,7 +41,6 @@ public class Gun : MonoBehaviour {
             shootBtn.GetComponent<Button>().interactable = false;
         }
 
-
     }
 
     IEnumerator doBeam() {
@@ -53,11 +52,10 @@ public class Gun : MonoBehaviour {
         lr.enabled = false;
         lr.SetPosition(1, transform.position);
         
-
     }
 
     /**
-     * When you shoot the doBeam() is called, and the cooldownTimer is reset.
+     * When you shoot, the doBeam() is called, and the cooldownTimer is reset.
      */
     public void OnClick() {
         if (gunCooldownTimer > gunCooldown) {
@@ -67,5 +65,4 @@ public class Gun : MonoBehaviour {
         }
     }
 
-    
 }

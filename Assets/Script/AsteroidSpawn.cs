@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Class for spawning asteroids.
+ */
 public class AsteroidSpawn : MonoBehaviour {
 
     public GameObject asteroid;
@@ -10,12 +13,7 @@ public class AsteroidSpawn : MonoBehaviour {
     public float releaseAsteroidCooldoown;
     public bool dontSpawn = true;
 
-    // Start is called before the first frame update
-    void Start() {
-
-    }
-
-    // Update is called once per frame
+    
     void Update() {
         releaseAsteroidTimer += Time.deltaTime;
 

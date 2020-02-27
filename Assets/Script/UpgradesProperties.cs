@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/**
+ * Class for setting and holding correct upgrade properties upon entering game.
+ */
 public class UpgradesProperties : MonoBehaviour {
 
     public float gunRange;

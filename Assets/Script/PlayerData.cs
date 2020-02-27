@@ -4,6 +4,10 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
+
+/**
+ * Class for holding player data.
+ */
 [System.Serializable]
 public class PlayerData {
 

@@ -4,6 +4,9 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
 
+/**
+ * Class for pausing game.
+ */
 public class Pause : MonoBehaviour
 {
 
@@ -11,7 +14,6 @@ public class Pause : MonoBehaviour
     public GameObject mainMenuButton;
     private bool paused = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         continueButton.SetActive(false);
@@ -19,7 +21,6 @@ public class Pause : MonoBehaviour
         paused = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)) {
