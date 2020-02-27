@@ -18,27 +18,38 @@ public class Score : MonoBehaviour {
     public int highScore;
     public int cash;
 
-    // Start is called before the first frame update
-    void Start() {
+    private void Awake() {
         
+        
+        DontDestroyOnLoad(this.gameObject);
+
         scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
         highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
         cashText = GameObject.Find("CashText").GetComponent<TextMeshProUGUI>();
         SaveSystem.LoadPlayerData();
+
         
-        GameObject[] gc = GameObject.FindGameObjectsWithTag("GameControl");
-        if (gc.Length > 1) {
-            Destroy(gc[1]);
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        if (scene.name.Equals("MainMenu")) {
+            GameObject[] gameControl = GameObject.FindGameObjectsWithTag("GameControl");
+            for (int i = 0; i < gameControl.Length; i++) {
+                if (gameControl[i] != this.gameObject) {
+                    Destroy(gameControl[i]);
+                }
+            }
+
+            //SaveSystem.LoadPlayerData();
+
         }
-        DontDestroyOnLoad(this.gameObject);
-        
     }
 
 
 
     // Update is called once per frame
     void Update() {
-
+        SceneManager.sceneLoaded += OnSceneLoaded;
         if (SceneManager.GetActiveScene().name.Equals("Game")) {
 
             timer = Time.timeSinceLevelLoad;

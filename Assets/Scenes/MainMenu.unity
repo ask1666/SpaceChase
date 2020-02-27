@@ -527,8 +527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 222542a6805342844b9467e0b8ea53de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunRange: 0
-  gunCooldown: 0
+  gunRange: 3
+  gunCooldown: 1
 --- !u!1001 &322603383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -547,6 +547,10 @@ PrefabInstance:
     - target: {fileID: 1872517822, guid: 870ea5fb8d180dc409cd02c483c78429, type: 3}
       propertyPath: Mute
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872517822, guid: 870ea5fb8d180dc409cd02c483c78429, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 64936209774908585, guid: 870ea5fb8d180dc409cd02c483c78429,
         type: 3}
