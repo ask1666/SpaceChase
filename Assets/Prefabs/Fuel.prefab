@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 350036127}
   - component: {fileID: 350036129}
   - component: {fileID: 350036128}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4822,7 +4822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3411400896891602529}
   - component: {fileID: 3411400896891602530}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FuelGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4906,7 +4906,7 @@ GameObject:
   - component: {fileID: 1765799455}
   - component: {fileID: 1765799456}
   - component: {fileID: 1084717794}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fuel
   m_TagString: Fuel
   m_Icon: {fileID: 0}
