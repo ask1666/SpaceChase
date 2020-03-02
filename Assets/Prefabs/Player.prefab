@@ -727,8 +727,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  moveLeft: 0
-  moveRight: 0
   blockPlayerControl: 0
 --- !u!212 &464138049058611781
 SpriteRenderer:

@@ -17,6 +17,7 @@ public class Gun : MonoBehaviour {
     public float gunCooldown = 1f;
     private float gunCooldownTimer = 1f;
 
+    
     void Start() {
         lr = gameObject.GetComponent<LineRenderer>();
     }
@@ -40,6 +41,7 @@ public class Gun : MonoBehaviour {
         } else {
             shootBtn.GetComponent<Button>().interactable = false;
         }
+
 
     }
 
