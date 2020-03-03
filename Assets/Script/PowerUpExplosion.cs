@@ -41,14 +41,14 @@ public class PowerUpExplosion : MonoBehaviour {
     }
 
     void Ammo() {
-
+        GameObject.Find("Gun").GetComponent<Gun>().RefillAmmo();
     }
 
     void Fuel() {
-
+        GameObject.Find("JetPackPanel").GetComponent<JetPackBar>().RefillJetPack();
     }
 
     void Coin() {
-        GameObject.Find("GameControl").GetComponent<Score>().cash += 1;
+        GameObject.Find("GameControl").GetComponent<Score>().cash += 5;
     }
 }

@@ -50,4 +50,12 @@ public class AsteroidExplosion : MonoBehaviour {
             SceneManager.LoadScene("DeathScreen");
         }
     }
+
+    public static void killPlayer() {
+        Score score = GameObject.Find("GameControl").GetComponent<Score>();
+        UpgradesProperties UP = GameObject.Find("GameControl").GetComponent<UpgradesProperties>();
+        PlayerData playerData = new PlayerData(score.highScore, UP.gunCooldown, UP.gunRange, score.cash);
+        SaveSystem.SavePlayerData(playerData);
+        SceneManager.LoadScene("DeathScreen");
+    }
 }

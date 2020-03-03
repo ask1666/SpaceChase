@@ -16,6 +16,8 @@ public class Score : MonoBehaviour {
 
     public float score;
     private float timer;
+    private float multiplierTimer;
+    public float multiplierSpeed; //less for more score
     public int highScore;
     public int cash;
 
@@ -46,8 +48,10 @@ public class Score : MonoBehaviour {
     void Update() {
         SceneManager.sceneLoaded += OnSceneLoaded;
         if (SceneManager.GetActiveScene().name.Equals("Game")) {
+            
 
             timer = Time.timeSinceLevelLoad;
+            multiplierTimer = Mathf.Lerp(0f, 4f, timer / multiplierSpeed);
         }
 
         try {
@@ -65,7 +69,7 @@ public class Score : MonoBehaviour {
 
         }
 
-        score = timer;
+        score = timer*multiplierTimer;
         scoreText.text = "Score:\n" + Mathf.RoundToInt(score);
         highScoreText.text = "HighScore:\n" + highScore;
         cashText.text = "Cash:\n" + cash;

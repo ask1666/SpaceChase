@@ -12,11 +12,14 @@ public class AsteroidSpawn : MonoBehaviour {
     private float releaseAsteroidTimer;
     public float releaseAsteroidCooldoown;
     public bool dontSpawn = true;
+    public float speed;
+    private float cooldownTimer;
 
     
     void Update() {
         releaseAsteroidTimer += Time.deltaTime;
-
+        cooldownTimer += Time.deltaTime * speed;
+        releaseAsteroidCooldoown = Mathf.Lerp(4, 0.8f, cooldownTimer);
         if (releaseAsteroidTimer > releaseAsteroidCooldoown) {
             Vector3 spawnPosition = new Vector3(Random.Range(-1.7f, 1.7f), 6.34f, 0);
             GameObject asteroidSpawned = Instantiate(asteroid, spawnPosition, Quaternion.identity);
