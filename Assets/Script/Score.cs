@@ -33,7 +33,11 @@ public class Score : MonoBehaviour {
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+
+        
+
         if (scene.name.Equals("MainMenu")) {
+            Time.timeScale = 1;
             GameObject[] gameControl = GameObject.FindGameObjectsWithTag("GameControl");
             for (int i = 0; i < gameControl.Length; i++) {
                 if (gameControl[i] != this.gameObject) {

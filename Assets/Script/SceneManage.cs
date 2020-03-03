@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-
-
+using UnityEngine.UI;
 
 public class SceneManage : MonoBehaviour
 {
@@ -21,5 +20,9 @@ public class SceneManage : MonoBehaviour
 
     public void ChangeScene(string sceneName) {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void OnPointerDown(Button btnPressed) {
+        btnPressed.GetComponent<Animator>().SetTrigger("Pressed");
     }
 }
