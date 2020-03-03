@@ -30,9 +30,9 @@ public class Gun : MonoBehaviour {
     void Update() {
         gunCooldownTimer += Time.deltaTime;
         ammoText.text = "" + ammo;
-        Debug.DrawRay(new Vector2(transform.position.x -0.09f, transform.position.y), Vector2.up * beamRange, Color.green);
+        Debug.DrawRay(new Vector2(transform.position.x -0.15f, transform.position.y), Vector2.up * beamRange, Color.green);
 
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 0.09f, transform.position.y), Vector2.up * beamRange);
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 0.15f, transform.position.y), Vector2.up * beamRange);
 
         if (hit.collider != null) {
             float distance = Mathf.Abs(hit.point.y - transform.position.y);
@@ -45,6 +45,11 @@ public class Gun : MonoBehaviour {
             shootBtn.GetComponent<Button>().interactable = true;
         } else {
             shootBtn.GetComponent<Button>().interactable = false;
+        }
+
+        if (lr.enabled) {
+            lr.SetPosition(0, new Vector2(transform.position.x - 0.15f, transform.position.y));
+            lr.SetPosition(1, new Vector2(transform.position.x - 0.15f, transform.position.y + beamRange));
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
@@ -67,8 +72,8 @@ public class Gun : MonoBehaviour {
         if (ammo > 0)
             ammo -= 1;
         lr.enabled = true;
-        lr.SetPosition(0, new Vector2(transform.position.x - 0.09f, transform.position.y));
-        lr.SetPosition(1, new Vector2(transform.position.x - 0.09f, transform.position.y + beamRange));
+        lr.SetPosition(0, new Vector2(transform.position.x - 0.15f, transform.position.y));
+        lr.SetPosition(1, new Vector2(transform.position.x - 0.15f, transform.position.y + beamRange));
         yield return new WaitForSeconds(0.2f);
         lr.enabled = false;
         lr.SetPosition(1, transform.position);
