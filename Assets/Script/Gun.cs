@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,7 +13,7 @@ public class Gun : MonoBehaviour {
 
     private LineRenderer lr;
     public Button shootBtn;
-    public Text ammoText;
+    public TextMeshProUGUI ammoText;
     public float beamRange;
     public static bool shoot = false;
     public float gunCooldown = 1f;
@@ -84,7 +85,7 @@ public class Gun : MonoBehaviour {
      * When you shoot, the doBeam() is called, and the cooldownTimer is reset.
      */
     public void OnClick() {
-        if (gunCooldownTimer > gunCooldown) {
+        if (gunCooldownTimer > gunCooldown && ammo > 0) {
             StartCoroutine(doBeam());
             shoot = false;
             gunCooldownTimer = 0;
