@@ -5872,12 +5872,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2312, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.501
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -7011,7 +7011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -479, y: -12}
+  m_AnchoredPosition: {x: -479, y: -11.999756}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2055039329
@@ -7296,16 +7296,6 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 2110673315}
-    - target: {fileID: 464138050280880671, guid: 7a4bebf9f50e3bb4ba1aea23befbd1b9,
-        type: 3}
-      propertyPath: startAmmo
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 464138050280880671, guid: 7a4bebf9f50e3bb4ba1aea23befbd1b9,
-        type: 3}
-      propertyPath: ammoRefillAmount
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a4bebf9f50e3bb4ba1aea23befbd1b9, type: 3}
 --- !u!1001 &2618978286989774180
