@@ -24,5 +24,12 @@ public class SceneManage : MonoBehaviour
 
     public void OnPointerDown(Button btnPressed) {
         btnPressed.GetComponent<Animator>().SetTrigger("Pressed");
+        btnPressed.GetComponent<AudioSource>().Play();
+    }
+
+    public void ResetData() {
+        PlayerData playerData = new PlayerData(0, 1, 3, 0);
+        SaveSystem.SavePlayerData(playerData);
+        SceneManager.LoadScene("MainMenu");
     }
 }

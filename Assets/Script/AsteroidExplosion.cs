@@ -53,6 +53,8 @@ public class AsteroidExplosion : MonoBehaviour {
 
     public static void killPlayer() {
         Score score = GameObject.Find("GameControl").GetComponent<Score>();
+        score.cash += Mathf.RoundToInt(score.score) / 10;
+        score.earnedCash += Mathf.RoundToInt(score.score) / 10;
         UpgradesProperties UP = GameObject.Find("GameControl").GetComponent<UpgradesProperties>();
         PlayerData playerData = new PlayerData(score.highScore, UP.gunCooldown, UP.gunRange, score.cash);
         SaveSystem.SavePlayerData(playerData);

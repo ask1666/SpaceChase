@@ -51,6 +51,7 @@ public class PowerUpExplosion : MonoBehaviour {
     }
 
     void Coin() {
+        GameObject.Find("GameControl").GetComponent<Score>().earnedCash += 5;
         GameObject.Find("GameControl").GetComponent<Score>().cash += 5;
     }
 }
