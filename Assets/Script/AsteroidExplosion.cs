@@ -11,6 +11,7 @@ public class AsteroidExplosion : MonoBehaviour {
     public bool explode;
     public ParticleSystem explosion;
     public GameObject graphic;
+    public AudioSource sound;
     private float timeSinceExploded = 0.4f;
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class AsteroidExplosion : MonoBehaviour {
         GetComponent<Rigidbody2D>().freezeRotation = true;
         GetComponent<CircleCollider2D>().enabled = false;
         explosion.Play();
+        sound.Play();
         yield return new WaitForSeconds(0.4f);
         Destroy(this.gameObject);
 
@@ -43,11 +45,9 @@ public class AsteroidExplosion : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag.Equals("Player")) {
-            Score score = GameObject.Find("GameControl").GetComponent<Score>();
-            UpgradesProperties UP = GameObject.Find("GameControl").GetComponent<UpgradesProperties>();
-            PlayerData playerData = new PlayerData(score.highScore, UP.gunCooldown, UP.gunRange, score.cash);
-            SaveSystem.SavePlayerData(playerData);
-            SceneManager.LoadScene("DeathScreen");
+            collision.gameObject.GetComponent<AudioSource>().Play();
+            killPlayer();
+            
         }
     }
 
@@ -58,4 +58,6 @@ public class AsteroidExplosion : MonoBehaviour {
         SaveSystem.SavePlayerData(playerData);
         SceneManager.LoadScene("DeathScreen");
     }
+
+    
 }

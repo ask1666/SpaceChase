@@ -8,6 +8,7 @@ public class PowerUpExplosion : MonoBehaviour {
     public GameObject graphic;
     public Collider2D theCollider;
     public Animator animator;
+    public AudioSource sound;
 
     // Start is called before the first frame update
     void Start() {
@@ -35,6 +36,7 @@ public class PowerUpExplosion : MonoBehaviour {
         animator.enabled = false;
         theCollider.enabled = false;
         explosion.Play();
+        sound.Play();
         yield return new WaitForSeconds(0.4f);
         Destroy(this.gameObject);
 

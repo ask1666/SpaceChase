@@ -59,8 +59,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -181,6 +183,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -901,7 +907,7 @@ ScriptsOnlyBuild:
     className: VertexJitter
   - hash:
       serializedVersion: 2
-      Hash: 1c04a890f9898618b8af17fbfcd4954b
+      Hash: 7894af980fd8e5000888d8343d34eb26
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PowerUpExplosion
@@ -1195,7 +1201,7 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_B
   - hash:
       serializedVersion: 2
-      Hash: 1453188e437f4be59e46e1f886925adb
+      Hash: f6458f90068154d3cfa2e9cf414c9676
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Gun
@@ -1243,7 +1249,7 @@ ScriptsOnlyBuild:
     className: SkewTextExample
   - hash:
       serializedVersion: 2
-      Hash: da758c6f05362cb2f6ee48e30762e753
+      Hash: 61d312bf9cccc0cca6059cdf20827de7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AsteroidExplosion

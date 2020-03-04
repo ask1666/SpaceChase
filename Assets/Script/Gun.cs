@@ -14,6 +14,7 @@ public class Gun : MonoBehaviour {
     private LineRenderer lr;
     public Button shootBtn;
     public TextMeshProUGUI ammoText;
+    public AudioSource sound;
     public float beamRange;
     public static bool shoot = false;
     public float gunCooldown = 1f;
@@ -73,6 +74,7 @@ public class Gun : MonoBehaviour {
         if (ammo > 0)
             ammo -= 1;
         lr.enabled = true;
+        sound.Play();
         lr.SetPosition(0, new Vector2(transform.position.x - 0.15f, transform.position.y));
         lr.SetPosition(1, new Vector2(transform.position.x - 0.15f, transform.position.y + beamRange));
         yield return new WaitForSeconds(0.2f);
