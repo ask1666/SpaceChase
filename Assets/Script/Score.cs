@@ -42,7 +42,8 @@ public class Score : MonoBehaviour {
                     Destroy(gameControl[i]);
                 }
             }
-        } if (scene.name.Equals("Game")) {
+        }
+        if (scene.name.Equals("Game")) {
             earnedCash = 0;
         }
 
@@ -50,13 +51,10 @@ public class Score : MonoBehaviour {
 
 
     void Update() {
-        Debug.Log("earnedCash:" + earnedCash);
         SceneManager.sceneLoaded += OnSceneLoaded;
         if (SceneManager.GetActiveScene().name.Equals("Game")) {
             scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
             scoreText.text = "Score:\n" + Mathf.RoundToInt(score);
-            
-            
             timer = Time.timeSinceLevelLoad;
             multiplierTimer = Mathf.Lerp(0f, 4f, timer / multiplierSpeed);
         } else if (SceneManager.GetActiveScene().name.Equals("DeathScreen")) {
@@ -67,24 +65,20 @@ public class Score : MonoBehaviour {
         }
 
         try {
-            
             highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
             cashText = GameObject.Find("CashText").GetComponent<TextMeshProUGUI>();
-            
         } catch (System.NullReferenceException) {
-
         }
 
         if (score > highScore) {
             highScore = Mathf.RoundToInt(score);
-
         }
 
-        score = timer*multiplierTimer;
-        
+        score = timer * multiplierTimer;
+
         highScoreText.text = "HighScore:\n" + highScore;
         cashText.text = "Cash:\n" + cash;
-        
+
 
 
 

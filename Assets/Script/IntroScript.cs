@@ -22,12 +22,10 @@ public class IntroScript : MonoBehaviour {
         PlayerController playercontroller = GameObject.Find("Player").GetComponent<PlayerController>();
         asteroidSpawner.dontSpawn = true;
         powerUpSpawner.dontSpawn = true;
-        playercontroller.blockPlayerControl = true;
 
         StartCoroutine(StartIntro());
         asteroidSpawner.dontSpawn = false;
         powerUpSpawner.dontSpawn = false;
-        playercontroller.blockPlayerControl = false;
 
     }
 
