@@ -15,6 +15,12 @@ public class PlayerController : MonoBehaviour {
             this.gameObject.transform.Translate(direction * (Time.deltaTime * speed));
         
 
+        if (Input.GetKey(KeyCode.A)) {
+            this.gameObject.transform.Translate(Vector2.left * (Time.deltaTime * speed));
+        } else if (Input.GetKey(KeyCode.D)) {
+            this.gameObject.transform.Translate(Vector2.right * (Time.deltaTime * speed));
+        }
+
     }
 
     

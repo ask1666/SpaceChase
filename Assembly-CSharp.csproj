@@ -84,6 +84,7 @@
     <Compile Include="Assets\Script\SaveSystem.cs" />
     <Compile Include="Assets\Script\SceneManage.cs" />
     <Compile Include="Assets\Script\Score.cs" />
+    <Compile Include="Assets\Script\SkyBoxScroll.cs" />
     <Compile Include="Assets\Script\UpgradesOnClick.cs" />
     <Compile Include="Assets\Script\UpgradesProperties.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
