@@ -73,6 +73,7 @@
     <Compile Include="Assets\Script\AsteroidDestroyer.cs" />
     <Compile Include="Assets\Script\AsteroidExplosion.cs" />
     <Compile Include="Assets\Script\AsteroidSpawn.cs" />
+    <Compile Include="Assets\Script\AudioController.cs" />
     <Compile Include="Assets\Script\Gun.cs" />
     <Compile Include="Assets\Script\IntroScript.cs" />
     <Compile Include="Assets\Script\JetPackBar.cs" />
