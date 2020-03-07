@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - Fuel
   - Ammo
+  - Mine
   layers:
   - Default
   - TransparentFX
