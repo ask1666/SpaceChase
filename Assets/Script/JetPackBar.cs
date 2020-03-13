@@ -38,6 +38,6 @@ public class JetPackBar : MonoBehaviour {
         GameObject.Find("JetPack").GetComponent<ParticleSystem>().Stop();
         GameObject.Find("Player").GetComponent<Animator>().SetTrigger("NoFuel");
         yield return new WaitForSeconds(0.8f);
-        AsteroidExplosion.killPlayer();
+        ObstacleExplosion.killPlayer();
     }
 }

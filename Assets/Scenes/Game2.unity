@@ -1904,9 +1904,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d754197d422a1c48b31d4806d7de107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroid: {fileID: 8711764592729568529, guid: fb1c7a5bd13809e49ac2dbea713fd5e4,
-    type: 3}
-  releaseAsteroidCooldoown: 3
+  obstacles:
+  - {fileID: 4945631373454524760, guid: 2b97457170379804c9bd9069133ad1cf, type: 3}
+  - {fileID: 8415449341661674589, guid: f25595066e4e5244b85358bfd68aa1dd, type: 3}
+  - {fileID: 7524309111667324149, guid: 1f86e166a7bdd134981eae61a7df2862, type: 3}
+  releaseObstacleCooldoown: 3
   dontSpawn: 1
   speed: 0.01
 --- !u!4 &1110033988
@@ -7362,6 +7364,16 @@ PrefabInstance:
     - target: {fileID: 464138049058611779, guid: 7a4bebf9f50e3bb4ba1aea23befbd1b9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 464138049058611782, guid: 7a4bebf9f50e3bb4ba1aea23befbd1b9,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 464138049058611782, guid: 7a4bebf9f50e3bb4ba1aea23befbd1b9,
+        type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 464138049058611784, guid: 7a4bebf9f50e3bb4ba1aea23befbd1b9,

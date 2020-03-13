@@ -10,7 +10,7 @@ public class AsteroidDestroyer : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.tag.Equals("Player")) {
-
+            ObstacleExplosion.killPlayer();
         } else {
             Destroy(collision.gameObject);
         }

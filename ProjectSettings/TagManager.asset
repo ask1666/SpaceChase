@@ -10,6 +10,7 @@ TagManager:
   - Fuel
   - Ammo
   - Mine
+  - Garbage
   layers:
   - Default
   - TransparentFX

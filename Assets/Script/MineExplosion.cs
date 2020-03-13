@@ -19,14 +19,15 @@ public class MineExplosion : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         timeSinceExploded += Time.deltaTime;
-        if (explode == true && timeSinceExploded > 0.4f) {
+        if (explode == true && timeSinceExploded > 1f) {
             timeSinceExploded = 0;
             StartCoroutine(doExplosion());
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag.Equals("Player")) {
+        if (collision.gameObject.tag.Equals("Player") && timeSinceExploded > 1f) {
+            timeSinceExploded = 0;
             StartCoroutine(doExplosion());
             
         }
@@ -40,8 +41,10 @@ public class MineExplosion : MonoBehaviour {
         theCollider.enabled = false;
         explodeAnimator.SetTrigger("explode");
         sound.Play();
+        Debug.Log("did it");
         yield return new WaitForSeconds(1f);
-        AsteroidExplosion.killPlayer();
+        Destroy(this.gameObject);
+        ObstacleExplosion.killPlayer();
 
     }
 }

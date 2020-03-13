@@ -25,7 +25,7 @@ public class PowerUpExplosion : MonoBehaviour {
                 Fuel();
             } else if (this.gameObject.tag.Equals("Ammo")) {
                 Ammo();
-            }
+            } 
         }
     }
 
@@ -54,4 +54,6 @@ public class PowerUpExplosion : MonoBehaviour {
         GameObject.Find("GameControl").GetComponent<Score>().earnedCash += 5;
         GameObject.Find("GameControl").GetComponent<Score>().cash += 5;
     }
+
+    
 }
