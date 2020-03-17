@@ -25,7 +25,7 @@ public class ObstacleSpawn : MonoBehaviour {
             GameObject obstacleSpawned = Instantiate(obstacles[Random.Range(0,obstacles.Length)], spawnPosition, Quaternion.identity);
             obstacleSpawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(0,8), ForceMode2D.Impulse);
             if (!obstacleSpawned.gameObject.tag.Equals("Mine")) {
-                obstacleSpawned.transform.localScale = Vector2.one * Random.Range(0.3f, 1.2f);
+                obstacleSpawned.transform.localScale = Vector3.one * Random.Range(0.3f, 1.2f);
             }
             releaseObstacleTimer = Time.deltaTime;
         }

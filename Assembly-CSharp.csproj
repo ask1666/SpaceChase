@@ -63,7 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ExplosionHit.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
@@ -73,6 +72,7 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Script\AsteroidDestroyer.cs" />
     <Compile Include="Assets\Script\AudioController.cs" />
+    <Compile Include="Assets\Script\ExplosionHit.cs" />
     <Compile Include="Assets\Script\Gun.cs" />
     <Compile Include="Assets\Script\IntroScript.cs" />
     <Compile Include="Assets\Script\JetPackBar.cs" />
