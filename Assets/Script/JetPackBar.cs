@@ -33,10 +33,10 @@ public class JetPackBar : MonoBehaviour {
     }
 
     IEnumerator KillPlayer() {
-        GameObject.Find("Player").GetComponent<CapsuleCollider2D>().enabled = false;
-        GameObject.Find("Player").GetComponent<Animator>().applyRootMotion = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<CapsuleCollider2D>().enabled = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().applyRootMotion = false;
         GameObject.Find("JetPack").GetComponent<ParticleSystem>().Stop();
-        GameObject.Find("Player").GetComponent<Animator>().SetTrigger("NoFuel");
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetTrigger("NoFuel");
         yield return new WaitForSeconds(0.8f);
         ObstacleExplosion.killPlayer();
     }

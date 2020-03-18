@@ -15,12 +15,14 @@ public class PlayerData {
     public float gunReloadTime;
     public float gunRange;
     public int cash;
+    public string playerPrefab;
 
-    public PlayerData (int highScore, float gunReloadTime, float gunRange, int cash) {
+    public PlayerData (int highScore, float gunReloadTime, float gunRange, int cash, string playerPrefab) {
         this.highScore = highScore;
         this.gunReloadTime = gunReloadTime;
         this.gunRange = gunRange;
         this.cash = cash;
+        this.playerPrefab = playerPrefab;
     }
 
     

@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour {
 
     public float speed = 0.01f;
     public VariableJoystick variableJoystick;
+
+    void Start() {
+        variableJoystick = GameObject.Find("Variable Joystick").GetComponent<VariableJoystick>(); 
+    }
     void Update() {
 
         Vector2 direction = Vector2.right * variableJoystick.Horizontal;

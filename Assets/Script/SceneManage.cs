@@ -27,8 +27,12 @@ public class SceneManage : MonoBehaviour
         btnPressed.GetComponent<AudioSource>().Play();
     }
 
+    public void changeToPreviousScene() {
+        SceneManager.LoadScene(GameObject.Find("GameControl").GetComponent<Score>().previousScene);
+    }
+
     public void ResetData() {
-        PlayerData playerData = new PlayerData(0, 1, 3, 0);
+        PlayerData playerData = new PlayerData(0, 1, 3, 0, "Player3");
         SaveSystem.SavePlayerData(playerData);
         SceneManager.LoadScene("MainMenu");
     }

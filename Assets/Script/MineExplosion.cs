@@ -41,7 +41,6 @@ public class MineExplosion : MonoBehaviour {
         theCollider.enabled = false;
         explodeAnimator.SetTrigger("explode");
         sound.Play();
-        Debug.Log("did it");
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
         ObstacleExplosion.killPlayer();

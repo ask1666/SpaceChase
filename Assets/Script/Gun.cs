@@ -25,6 +25,8 @@ public class Gun : MonoBehaviour {
 
     
     void Start() {
+        ammoText = GameObject.Find("AmmoNrText").GetComponent<TextMeshProUGUI>();
+        shootBtn = GameObject.Find("ShootBtn").GetComponent<Button>();
         lr = gameObject.GetComponent<LineRenderer>();
         ammo = startAmmo;
     }

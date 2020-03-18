@@ -15,7 +15,7 @@ public class UpgradesOnClick : MonoBehaviour {
     public void onClickGunRange() {
         Score score = GameObject.Find("GameControl").GetComponent<Score>();
         UpgradesProperties UP = GameObject.Find("GameControl").GetComponent<UpgradesProperties>();
-        PlayerData playerData = new PlayerData(score.highScore, UP.gunCooldown, UP.gunRange + gunRangeIncrease, score.cash - gunRangeIncreaseCost);
+        PlayerData playerData = new PlayerData(score.highScore, UP.gunCooldown, UP.gunRange + gunRangeIncrease, score.cash - gunRangeIncreaseCost, UP.playerPrefab.name);
         SaveSystem.SavePlayerData(playerData);
         SaveSystem.LoadPlayerData();
         Debug.Log("saved");
@@ -24,9 +24,11 @@ public class UpgradesOnClick : MonoBehaviour {
     public void onClickGunReloadTime() {
         Score score = GameObject.Find("GameControl").GetComponent<Score>();
         UpgradesProperties UP = GameObject.Find("GameControl").GetComponent<UpgradesProperties>();
-        PlayerData playerData = new PlayerData(score.highScore, UP.gunCooldown - gunReloadTimeDecrease, UP.gunRange, score.cash - gunReloadTimeDecreaseCost);
+        PlayerData playerData = new PlayerData(score.highScore, UP.gunCooldown - gunReloadTimeDecrease, UP.gunRange, score.cash - gunReloadTimeDecreaseCost, UP.playerPrefab.name);
         SaveSystem.SavePlayerData(playerData);
         SaveSystem.LoadPlayerData();
         Debug.Log("saved");
     }
+
+
 }

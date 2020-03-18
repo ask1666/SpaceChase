@@ -23,14 +23,16 @@ public class AudioController : MonoBehaviour {
         try {
             AudioSource foundAudioSource = GameObject.Find("AudioSource").GetComponent<AudioSource>();
             if (foundAudioSource != null) {
-                this.audioSource.mute = true;
+                audioSource.mute = true;
             }
-            Debug.Log(foundAudioSource);
+
         } catch (NullReferenceException) {
-            if (this.audioSource.mute) {
-                this.audioSource.Play();
-                this.audioSource.mute = false;
+            
+            if (audioSource.mute) {
+                audioSource.Play();
+                audioSource.mute = false;
             }
-        }
+            
+        } 
     }
 }

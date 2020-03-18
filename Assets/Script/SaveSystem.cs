@@ -32,11 +32,11 @@ public static class SaveSystem {
             stream.Close();
 
             GameObject gameControl = GameObject.Find("GameControl");
-            GameObject gun = GameObject.Find("Gun");
             gameControl.GetComponent<Score>().highScore = data.highScore;
             gameControl.GetComponent<Score>().cash = data.cash;
-            GameObject.Find("GameControl").GetComponent<UpgradesProperties>().gunRange = data.gunRange;
-            GameObject.Find("GameControl").GetComponent<UpgradesProperties>().gunCooldown = data.gunReloadTime;
+            gameControl.GetComponent<UpgradesProperties>().gunRange = data.gunRange;
+            gameControl.GetComponent<UpgradesProperties>().gunCooldown = data.gunReloadTime;
+            gameControl.GetComponent<UpgradesProperties>().playerPrefab = Resources.Load<GameObject>(data.playerPrefab);
 
 
         } else {

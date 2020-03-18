@@ -10,13 +10,23 @@ public class UpgradesProperties : MonoBehaviour {
 
     public float gunRange;
     public float gunCooldown;
+    public GameObject playerPrefab;
 
     // Start is called before the first frame update
     void Start() {
-        if (gunRange <= 3 || gunCooldown >= 1) {
-            Score score = GameObject.Find("GameControl").GetComponent<Score>();
-            PlayerData playerData = new PlayerData(score.highScore, 1, 3, score.cash);
-            SaveSystem.SavePlayerData(playerData);
+        try {
+            if (gunRange <= 3 || gunCooldown >= 1) {
+                Score score = GameObject.Find("GameControl").GetComponent<Score>();
+                PlayerData playerData = new PlayerData(score.highScore, 1, 3, score.cash, playerPrefab.name);
+                SaveSystem.SavePlayerData(playerData);
+            }
+        } catch (UnassignedReferenceException) {
+            playerPrefab = Resources.Load<GameObject>("Player3");
+            if (gunRange <= 3 || gunCooldown >= 1) {
+                Score score = GameObject.Find("GameControl").GetComponent<Score>();
+                PlayerData playerData = new PlayerData(score.highScore, 1, 3, score.cash, playerPrefab.name);
+                SaveSystem.SavePlayerData(playerData);
+            }
         }
         
     }
@@ -29,7 +39,7 @@ public class UpgradesProperties : MonoBehaviour {
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        if (SceneManager.GetActiveScene().name.Equals("Game")) {
+        if (scene.name.Equals("Game") || scene.name.Equals("Game2") || scene.name.Equals("Game2")) {
             GameObject.Find("Gun").GetComponent<Gun>().gunCooldown = gunCooldown;
             GameObject.Find("Gun").GetComponent<Gun>().beamRange = gunRange;
         }
