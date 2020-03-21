@@ -11,6 +11,7 @@ TagManager:
   - Ammo
   - Mine
   - Garbage
+  - Bullet
   layers:
   - Default
   - TransparentFX
