@@ -548,7 +548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207129492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.327, y: -5.835, z: -4547.201}
+  m_LocalPosition: {x: -0.327, y: -5.835, z: 0}
   m_LocalScale: {x: 6.7125, y: 0.0875, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2001,9 +2001,10 @@ MonoBehaviour:
   - {fileID: 4945631373454524760, guid: 2b97457170379804c9bd9069133ad1cf, type: 3}
   - {fileID: 8415449341661674589, guid: f25595066e4e5244b85358bfd68aa1dd, type: 3}
   - {fileID: 7524309111667324149, guid: 1f86e166a7bdd134981eae61a7df2862, type: 3}
-  releaseObstacleCooldoown: 3
+  startReleaseObstacleCooldoown: 2
   dontSpawn: 1
-  speed: 0.01
+  speed: 0.4
+  minimumReleaseObstacleCooldown: 0.3
 --- !u!4 &1110033988
 Transform:
   m_ObjectHideFlags: 0
@@ -2012,7 +2013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110033985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2874022, y: 3.1737359, z: -1140.8281}
+  m_LocalPosition: {x: -0.2874022, y: 3.1737359, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -14,34 +14,16 @@ public class UpgradesProperties : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        try {
-            if (gunRange <= 3 || gunCooldown >= 1) {
-                Score score = GameObject.Find("GameControl").GetComponent<Score>();
-                PlayerData playerData = new PlayerData(score.highScore, 1, 3, score.cash, playerPrefab.name);
-                SaveSystem.SavePlayerData(playerData);
-            }
-        } catch (UnassignedReferenceException) {
-            playerPrefab = Resources.Load<GameObject>("Player3");
-            if (gunRange <= 3 || gunCooldown >= 1) {
-                Score score = GameObject.Find("GameControl").GetComponent<Score>();
-                PlayerData playerData = new PlayerData(score.highScore, 1, 3, score.cash, playerPrefab.name);
-                SaveSystem.SavePlayerData(playerData);
-            }
-        }
+        
         
     }
 
     // Update is called once per frame
     void Update() {
 
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        
 
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-        if (scene.name.Equals("Game") || scene.name.Equals("Game2") || scene.name.Equals("Game2")) {
-            GameObject.Find("Gun").GetComponent<Gun>().gunCooldown = gunCooldown;
-            GameObject.Find("Gun").GetComponent<Gun>().beamRange = gunRange;
-        }
-    }
+    
 }

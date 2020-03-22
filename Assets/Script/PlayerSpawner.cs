@@ -19,7 +19,7 @@ public class PlayerSpawner : MonoBehaviour {
 
             }
         } catch (NullReferenceException) {
-            playerPrefab = Resources.Load<GameObject>("Player3");
+            playerPrefab = Resources.Load<GameObject>("Player2");
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player == null) {
                 //Spawn Selected Loadout

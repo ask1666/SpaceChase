@@ -21,10 +21,10 @@ public class JetPackBar : MonoBehaviour {
         timer += Time.deltaTime;
 
         float percent = timer / maxJetTime;
-        jetPackBar.fillAmount = Mathf.Lerp(1, 0, percent); ;
+        jetPackBar.fillAmount = Mathf.Lerp(1, 0, percent);
 
         if (jetPackBar.fillAmount == 0.0f) {
-            StartCoroutine(KillPlayer());
+            StartCoroutine(ObstacleExplosion.killPlayer());
         }
     }
 
@@ -32,12 +32,5 @@ public class JetPackBar : MonoBehaviour {
         timer = Time.deltaTime;
     }
 
-    IEnumerator KillPlayer() {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<CapsuleCollider2D>().enabled = false;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().applyRootMotion = false;
-        GameObject.Find("JetPack").GetComponent<ParticleSystem>().Stop();
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetTrigger("NoFuel");
-        yield return new WaitForSeconds(0.8f);
-        ObstacleExplosion.killPlayer();
-    }
+    
 }

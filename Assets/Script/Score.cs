@@ -14,7 +14,13 @@ public class Score : MonoBehaviour {
     private TextMeshProUGUI highScoreText;
     private TextMeshProUGUI cashText;
     private TextMeshProUGUI EarnedCashNrText;
+    public TextMeshProUGUI ammoText;
 
+    private Button shootBtn;
+
+    public int startAmmo;
+    public int ammoRefillAmount;
+    public int ammo;
     public float score;
     private float timer;
     private float multiplierTimer;
@@ -34,6 +40,10 @@ public class Score : MonoBehaviour {
 
     }
 
+    private void Start() {
+        
+    }
+
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         if (scene.name.Equals("MainMenu")) {
             Time.timeScale = 1;
@@ -48,6 +58,8 @@ public class Score : MonoBehaviour {
         } else if (scene.name.Equals("Game") || scene.name.Equals("Game2") || scene.name.Equals("Game3")) {
             previousScene = scene.name;
             earnedCash = 0;
+            ammoText = GameObject.Find("AmmoNrText").GetComponent<TextMeshProUGUI>();
+            ammo = startAmmo;
         } else if (scene.name.Equals("DeathScreen")) {
             scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
             scoreText.text = "Score:\n" + Mathf.RoundToInt(score);
@@ -58,12 +70,17 @@ public class Score : MonoBehaviour {
 
     }
 
-    
+    public void RefillAmmo() {
+        ammo += ammoRefillAmount;
+    }
 
 
     void Update() {
+        
+
         SceneManager.sceneLoaded += OnSceneLoaded;
         if (SceneManager.GetActiveScene().name.Equals("Game") || SceneManager.GetActiveScene().name.Equals("Game2") || SceneManager.GetActiveScene().name.Equals("Game3")) {
+            ammoText.text = "" + ammo;
             scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
             scoreText.text = "Score:\n" + Mathf.RoundToInt(score);
             timer = Time.timeSinceLevelLoad;

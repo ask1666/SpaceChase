@@ -13,30 +13,27 @@ public class Gun : MonoBehaviour {
 
     private LineRenderer lr;
     public Button shootBtn;
-    public TextMeshProUGUI ammoText;
     public AudioSource sound;
     public float beamRange;
     public static bool shoot = false;
     public float gunCooldown = 1f;
     private float gunCooldownTimer = 1f;
-    public int ammo;
-    public int startAmmo;
-    public int ammoRefillAmount;
+
+    private Score score;
 
     
     void Start() {
-        ammoText = GameObject.Find("AmmoNrText").GetComponent<TextMeshProUGUI>();
         shootBtn = GameObject.Find("ShootBtn").GetComponent<Button>();
         lr = gameObject.GetComponent<LineRenderer>();
-        ammo = startAmmo;
+        score = GameObject.Find("GameControl").GetComponent<Score>();
+        shootBtn.onClick.AddListener(delegate () { OnClick(); });
     }
 
     void Update() {
         gunCooldownTimer += Time.deltaTime;
-        ammoText.text = "" + ammo;
-        Debug.DrawRay(new Vector2(transform.position.x -0.15f, transform.position.y), Vector2.up * beamRange, Color.green);
+        Debug.DrawRay(new Vector2(transform.position.x -0f, transform.position.y), Vector2.up * beamRange, Color.green);
 
-        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 0.15f, transform.position.y), Vector2.up * beamRange);
+        RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 0f, transform.position.y), Vector2.up * beamRange);
 
         if (hit.collider != null) {
             float distance = Mathf.Abs(hit.point.y - transform.position.y);
@@ -58,20 +55,20 @@ public class Gun : MonoBehaviour {
         }
 
         if (lr.enabled) {
-            lr.SetPosition(0, new Vector2(transform.position.x - 0.15f, transform.position.y));
-            lr.SetPosition(1, new Vector2(transform.position.x - 0.15f, transform.position.y + beamRange));
+            lr.SetPosition(0, new Vector2(transform.position.x - 0f, transform.position.y));
+            lr.SetPosition(1, new Vector2(transform.position.x - 0f, transform.position.y + beamRange));
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) {
 
-            if (shootBtn.GetComponent<Button>().interactable == true && ammo != 0)
+            if (shootBtn.GetComponent<Button>().interactable == true && score.ammo != 0)
             OnClick();
         }
 
-        if (ammo == 0) {
+        if (score.ammo == 0) {
             shoot = false;
             shootBtn.GetComponent<Button>().interactable = false;
-        } else if (ammo > 0) {
+        } else if (score.ammo > 0) {
             shoot = true;
             shootBtn.GetComponent<Button>().interactable = true;
         }
@@ -79,12 +76,12 @@ public class Gun : MonoBehaviour {
     }
 
     IEnumerator doBeam() {
-        if (ammo > 0)
-            ammo -= 1;
+        if (score.ammo > 0)
+            score.ammo -= 1;
         lr.enabled = true;
         sound.Play();
-        lr.SetPosition(0, new Vector2(transform.position.x - 0.15f, transform.position.y));
-        lr.SetPosition(1, new Vector2(transform.position.x - 0.15f, transform.position.y + beamRange));
+        lr.SetPosition(0, new Vector2(transform.position.x - 0f, transform.position.y));
+        lr.SetPosition(1, new Vector2(transform.position.x - 0f, transform.position.y + beamRange));
         yield return new WaitForSeconds(0.2f);
         lr.enabled = false;
         lr.SetPosition(1, transform.position);
@@ -95,15 +92,13 @@ public class Gun : MonoBehaviour {
      * When you shoot, the doBeam() is called, and the cooldownTimer is reset.
      */
     public void OnClick() {
-        if (gunCooldownTimer > gunCooldown && ammo > 0) {
+        if (gunCooldownTimer > gunCooldown && score.ammo > 0) {
             StartCoroutine(doBeam());
             shoot = false;
             gunCooldownTimer = 0;
         }
     }
 
-    public void RefillAmmo() {
-        ammo += ammoRefillAmount;
-    }
+    
 
 }

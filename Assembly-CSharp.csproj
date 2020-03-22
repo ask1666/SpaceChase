@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+    <Compile Include="Assets\PlayerSelect.cs" />
     <Compile Include="Assets\Script\AsteroidDestroyer.cs" />
     <Compile Include="Assets\Script\AudioController.cs" />
     <Compile Include="Assets\Script\ExplosionHit.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="Assets\Script\SaveSystem.cs" />
     <Compile Include="Assets\Script\SceneManage.cs" />
     <Compile Include="Assets\Script\Score.cs" />
+    <Compile Include="Assets\Script\Shoot.cs" />
     <Compile Include="Assets\Script\SkyBoxScroll.cs" />
     <Compile Include="Assets\Script\UpgradesOnClick.cs" />
     <Compile Include="Assets\Script\UpgradesProperties.cs" />

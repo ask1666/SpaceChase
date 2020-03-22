@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -43,7 +44,9 @@ public class PowerUpExplosion : MonoBehaviour {
     }
 
     void Ammo() {
-        GameObject.Find("Gun").GetComponent<Gun>().RefillAmmo();
+
+        GameObject.Find("GameControl").GetComponent<Score>().RefillAmmo();
+        
     }
 
     void Fuel() {

@@ -6980,9 +6980,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
   - {fileID: 8711764592729568529, guid: fb1c7a5bd13809e49ac2dbea713fd5e4, type: 3}
-  releaseObstacleCooldoown: 3
+  startReleaseObstacleCooldoown: 4
   dontSpawn: 1
   speed: 0.01
+  minimumReleaseObstacleCooldown: 0.6
 --- !u!4 &1391721792
 Transform:
   m_ObjectHideFlags: 0
@@ -7143,7 +7144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580910821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.327, y: -5.835, z: -4547.201}
+  m_LocalPosition: {x: -0.327, y: -5.835, z: 0}
   m_LocalScale: {x: 6.7125, y: 0.0875, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
