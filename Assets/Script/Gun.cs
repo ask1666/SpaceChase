@@ -82,7 +82,7 @@ public class Gun : MonoBehaviour {
         sound.Play();
         lr.SetPosition(0, new Vector2(transform.position.x - 0f, transform.position.y));
         lr.SetPosition(1, new Vector2(transform.position.x - 0f, transform.position.y + beamRange));
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.8f);
         lr.enabled = false;
         lr.SetPosition(1, transform.position);
         

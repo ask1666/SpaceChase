@@ -477,7 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootBtn: {fileID: 0}
   sound: {fileID: 5617823886853500870}
-  beamRange: 3
+  beamRange: 7
   gunCooldown: 1
 --- !u!82 &5617823886853500870
 AudioSource:

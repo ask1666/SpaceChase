@@ -70,6 +70,6 @@ public class ObstacleExplosion : MonoBehaviour {
     void Garbage() {
         
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        player.transform.Translate(Vector2.down * 0.5f);
+        player.transform.Translate(Vector2.down * 1f);
     }
 }

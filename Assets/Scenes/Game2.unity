@@ -2001,9 +2001,9 @@ MonoBehaviour:
   - {fileID: 4945631373454524760, guid: 2b97457170379804c9bd9069133ad1cf, type: 3}
   - {fileID: 8415449341661674589, guid: f25595066e4e5244b85358bfd68aa1dd, type: 3}
   - {fileID: 7524309111667324149, guid: 1f86e166a7bdd134981eae61a7df2862, type: 3}
-  startReleaseObstacleCooldoown: 2
+  startReleaseObstacleCooldoown: 1.3
   dontSpawn: 1
-  speed: 0.4
+  speed: 0.03
   minimumReleaseObstacleCooldown: 0.3
 --- !u!4 &1110033988
 Transform:

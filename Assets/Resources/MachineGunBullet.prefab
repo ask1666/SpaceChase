@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4106035595335946454}
   - component: {fileID: 4106035595335946453}
+  - component: {fileID: -8459799174478447968}
   m_Layer: 0
   m_Name: MachineGunBullet
   m_TagString: Untagged
@@ -58,6 +59,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.06331867, y: 0.20072925}
   m_EdgeRadius: 0
+--- !u!114 &-8459799174478447968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4106035595335946452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b83c56eaf25ea14b89c7487b4562dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletSpeed: 0.4
 --- !u!1 &4106035596611553248
 GameObject:
   m_ObjectHideFlags: 0

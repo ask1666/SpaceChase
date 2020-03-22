@@ -14866,6 +14866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 2800007844626501765}
+  bullet: {fileID: 3934643797492038318, guid: 405cec061cabe9d4ea76f132eff3b086, type: 3}
   smoke: {fileID: 1953825603432916332}
   sparks: {fileID: 6683172560932335727}
   anim: {fileID: 4590793501213844411}

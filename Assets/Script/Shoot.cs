@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Shoot : MonoBehaviour {
 
     public Transform bulletSpawnPoint;
-    private GameObject bullet;
+    public GameObject bullet;
     public ParticleSystem smoke;
     public ParticleSystem sparks;
     public Animator anim;
@@ -24,7 +24,7 @@ public class Shoot : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        bullet = Resources.Load<GameObject>("PistolBullet");
+        
         shootBtn = GameObject.Find("ShootBtn").GetComponent<Button>();
         score = GameObject.Find("GameControl").GetComponent<Score>();
         shootBtn.onClick.AddListener(delegate () { OnClick(); });
@@ -58,10 +58,14 @@ public class Shoot : MonoBehaviour {
 
     IEnumerator doShoot() {
         
-        GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint);
-        spawnedBullet.transform.localScale = new Vector3(3f, 3f, 3f);
-        smoke.Play();
-        sparks.Play();
+        GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+        spawnedBullet.transform.localScale = new Vector3(1f, 1f, 1f);
+        try {
+            smoke.Play();
+            sparks.Play();
+        } catch (UnassignedReferenceException) {
+
+        }
         anim.SetTrigger("Shoot");
         sound.Play();
         Destroy(spawnedBullet, 0.9f);
