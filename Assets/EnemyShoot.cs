@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyShoot : MonoBehaviour {
 
     public GameObject bullet;
+    public Transform bulletSpawnPos;
     public float shootColdown;
     private float timer;
 
@@ -18,7 +19,7 @@ public class EnemyShoot : MonoBehaviour {
     void Update() {
         timer += Time.deltaTime;
         if (timer > shootColdown) {
-            Instantiate(bullet, transform.position, Quaternion.identity);
+            Instantiate(bullet, bulletSpawnPos.position, Quaternion.identity);
             timer = Time.deltaTime;
         }
     }

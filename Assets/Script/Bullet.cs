@@ -50,8 +50,12 @@ public class Bullet : MonoBehaviour {
         } catch (UnassignedReferenceException) {
             if (collision.gameObject.tag.Equals("Asteroid") || collision.gameObject.tag.Equals("Garbage")) {
                 collision.gameObject.GetComponent<ObstacleExplosion>().explode = true;
+                Destroy(this);
             } else if (collision.gameObject.tag.Equals("Mine")) {
                 collision.gameObject.GetComponent<MineExplosion>().explode = true;
+                Destroy(this);
+            } else if (collision.gameObject.tag.Equals("Enemy")) {
+                Destroy(this);
             }
         }
     }
