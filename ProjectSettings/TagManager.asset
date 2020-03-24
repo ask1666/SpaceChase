@@ -12,6 +12,7 @@ TagManager:
   - Mine
   - Garbage
   - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX

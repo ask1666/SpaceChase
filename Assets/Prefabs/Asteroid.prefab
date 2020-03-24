@@ -4880,7 +4880,7 @@ MonoBehaviour:
   explosion: {fileID: 1926739716468166}
   graphic: {fileID: 4643502362956417782}
   sound: {fileID: 4222466838158965726}
-  speed: 0.012
+  speed: 0.018
 --- !u!50 &1060471827
 Rigidbody2D:
   serializedVersion: 4

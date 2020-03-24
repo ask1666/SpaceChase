@@ -28,12 +28,12 @@ public class Shoot : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        
+
         shootBtn = GameObject.Find("ShootBtn").GetComponent<Button>();
         score = GameObject.Find("GameControl").GetComponent<Score>();
         shootBtn.onClick.AddListener(delegate () { OnClick(); });
         shootBtn.GetComponent<Button>().interactable = true;
-        dragDistance = Screen.height * 7 / 100; //dragDistance is 7% height of the screen
+        dragDistance = Screen.height * 5 / 100; //dragDistance is 7% height of the screen
     }
 
     // Update is called once per frame
@@ -45,7 +45,7 @@ public class Shoot : MonoBehaviour {
         } else {
             shootBtn.GetComponent<Button>().interactable = false;
         }
-        
+
         if (Input.GetKeyDown(KeyCode.Space)) {
 
             if (shootBtn.GetComponent<Button>().interactable == true && score.ammo >= 0) {
@@ -102,12 +102,12 @@ public class Shoot : MonoBehaviour {
             score.ammo -= 1;
             GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
             spawnedBullet.transform.localScale = new Vector3(1f, 1f, 1f);
-            
+
             sound.Play();
             Destroy(spawnedBullet, 0.9f);
             yield return new WaitForSeconds(soundPlayTime);
             sound.Stop();
-            
+
 
         } else {
             score.ammo -= 1;
@@ -124,7 +124,7 @@ public class Shoot : MonoBehaviour {
             Destroy(spawnedBullet, 0.9f);
             yield return new WaitForSeconds(soundPlayTime);
             sound.Stop();
-            
+
         }
 
     }
@@ -137,5 +137,5 @@ public class Shoot : MonoBehaviour {
         }
     }
 
-    
+
 }

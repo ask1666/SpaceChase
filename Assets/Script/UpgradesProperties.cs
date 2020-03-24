@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class UpgradesProperties : MonoBehaviour {
 
     public float jetpackDuration;
+    public float movementSpeed;
     public GameObject playerPrefab;
 
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class UpgradesProperties : MonoBehaviour {
     private void ChangedActiveScene(Scene previous, Scene current) {
         if (current.name.Equals("Game") || current.name.Equals("Game2") || current.name.Equals("Game3") || current.name.Equals("MainGame")) {
             JetPackBar.maxJetTime = jetpackDuration;
+            PlayerController.speed = movementSpeed;
         }
     }
 

@@ -41,6 +41,11 @@ public class Bullet : MonoBehaviour {
                 explosion.SetTrigger("explode");
                 explode = true;
                 Destroy(graphic);
+            } else if (collision.gameObject.tag.Equals("Enemy")) {
+                collision.gameObject.GetComponent<EnemyController>().Die();
+                impactSound.Play();
+                explosion.SetTrigger("explode");
+                explode = true;
             }
         } catch (UnassignedReferenceException) {
             if (collision.gameObject.tag.Equals("Asteroid") || collision.gameObject.tag.Equals("Garbage")) {

@@ -4,6 +4,9 @@ ScriptsOnlyBuild:
     - AsteroidDestroyer
     - AudioController
     - Bullet
+    - EnemyBullet
+    - EnemyController
+    - EnemyShoot
     - ExplosionHit
     - ExplosionOnTrigger
     - Gun
@@ -74,10 +77,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -587,6 +588,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 70
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -647,6 +650,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 16140}
     - Class: 114
       Script: {instanceID: 16142}
+    - Class: 114
+      Script: {instanceID: 34700}
+    - Class: 114
+      Script: {instanceID: 35260}
+    - Class: 114
+      Script: {instanceID: 35556}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1068,7 +1077,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 5cfff7cdaec69276e45a76bac1fb265d
+      Hash: 85ab70ef190b0f98851356b5fe6cecec
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JetPackBar
@@ -1260,7 +1269,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: a969d4621338e424f53f624fdbe84f24
+      Hash: ddb304ffc36183581ac6203807afd5f4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObstacleSpawn1
@@ -1482,7 +1491,7 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
-      Hash: 634dcefa202cc13e0c87fea43169b8ab
+      Hash: 8aedd6ef43fca3e6b89d1514080fd449
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UpgradesProperties
@@ -1686,7 +1695,7 @@ ScriptsOnlyBuild:
     className: TMP_DigitValidator
   - hash:
       serializedVersion: 2
-      Hash: a8dcaefa76a00f959edd2edfa82bc840
+      Hash: 830db6220bf9de23cc7bc91950f3e8a1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UpgradesOnClick
@@ -2260,6 +2269,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 240e537fc99a640072409477082e23bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyShoot
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyBullet
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyController
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

@@ -8,16 +8,22 @@ using UnityEngine.SceneManagement;
  */
 public class PlayerController : MonoBehaviour {
 
-    public float speed = 0.01f;
-    //public VariableJoystick variableJoystick;
+    public static float speed = 5f;
+    
 
     private Vector3 fp;   //First touch position
     private Vector3 lp;   //Last touch position
     private float dragDistance;  //minimum distance for a swipe to be registered
 
+    private bool swipeRight;
+    private bool swipeLeft;
+
+
+    private float startPos;
+
     void Start() {
-        //variableJoystick = GameObject.Find("Variable Joystick").GetComponent<VariableJoystick>(); 
-        dragDistance = Screen.height * 7 / 100; //dragDistance is 7% height of the screen
+        
+        dragDistance = Screen.height * 5 / 100; //dragDistance is 7% height of the screen
     }
     void Update() {
         
@@ -27,12 +33,19 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-       // Vector2 direction = Vector2.right * variableJoystick.Horizontal;
-       // this.gameObject.transform.Translate(direction * (Time.deltaTime * speed));
+       
 
-        if (Input.GetKeyDown(KeyCode.A)) {
+        if (Input.GetKeyDown(KeyCode.A) && !swipeRight) {
+            swipeLeft = true;
+            startPos = transform.position.x;
+        } else if (Input.GetKeyDown(KeyCode.D) && !swipeLeft) {
+            swipeRight = true;
+            startPos = transform.position.x;
+        }
+
+        if (swipeLeft) {
             SwipeLeft();
-        } else if (Input.GetKeyDown(KeyCode.D)) {
+        } else if (swipeRight) {
             SwipeRight();
         }
     
@@ -55,11 +68,12 @@ public class PlayerController : MonoBehaviour {
                 if (Mathf.Abs(lp.x - fp.x) > dragDistance || Mathf.Abs(lp.y - fp.y) > dragDistance) {//It's a drag
                                                                                                      //check if the drag is vertical or horizontal
                     if (Mathf.Abs(lp.x - fp.x) > Mathf.Abs(lp.y - fp.y)) {   //If the horizontal movement is greater than the vertical movement...
-                        if ((lp.x > fp.x))  //If the movement was to the right)
-                        {   //Right swipe
-                            SwipeRight();
-                        } else {   //Left swipe
-                            SwipeLeft();
+                        if ((lp.x > fp.x) && !swipeLeft) {
+                            swipeRight = true;
+                            startPos = transform.position.x;
+                        } else if (!(lp.x > fp.x) && !swipeRight) {
+                            swipeLeft = true;
+                            startPos = transform.position.x;
                         }
                     } else {   //the vertical movement is greater than the horizontal movement
                         if (lp.y > fp.y)  //If the movement was up
@@ -75,17 +89,19 @@ public class PlayerController : MonoBehaviour {
 
 
     private void SwipeRight() {
-        if (transform.position.x >= 1.7f) {
-
+        if (transform.position.x >= 1.7f || transform.position.x >= startPos + 1.7f) {
+            swipeRight = false;
         } else
-            transform.Translate(new Vector2( 1.7f, 0));
+            transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(transform.position.x + 1.7f, transform.position.y), Time.deltaTime * speed);
+            //transform.Translate(new Vector2( 1.7f, 0));
     }
 
     private void SwipeLeft() {
-        if (transform.position.x <= -1.7f) {
-
+        if (transform.position.x <= -1.7f || transform.position.x <= startPos - 1.7f) {
+            swipeLeft = false;
         } else
-            transform.Translate(new Vector2( - 1.7f, 0));
+            transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(transform.position.x - 1.7f, transform.position.y), Time.deltaTime * speed);
+        //transform.Translate(new Vector2( - 1.7f, 0));
     }
 
 

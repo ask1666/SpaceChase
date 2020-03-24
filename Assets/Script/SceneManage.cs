@@ -32,7 +32,7 @@ public class SceneManage : MonoBehaviour
     }
 
     public void ResetData() {
-        PlayerData playerData = new PlayerData(0, 30, 0, "Player2");
+        PlayerData playerData = new PlayerData(0, 30, 0, "Player2", 5f);
         SaveSystem.SavePlayerData(playerData);
         SceneManager.LoadScene("MainMenu");
     }
