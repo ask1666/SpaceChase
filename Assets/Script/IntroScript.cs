@@ -17,7 +17,7 @@ public class IntroScript : MonoBehaviour {
         SpaceShip = GameObject.Find("SpaceShip").GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
         playerJetPack = GameObject.Find("JetPack").GetComponent<ParticleSystem>();
-        ObstacleSpawn asteroidSpawner = GameObject.Find("Spawner").GetComponent<ObstacleSpawn>();
+        ObstacleSpawn1 asteroidSpawner = GameObject.Find("Spawner").GetComponent<ObstacleSpawn1>();
         PowerUpSpawner powerUpSpawner = GameObject.Find("Spawner").GetComponent<PowerUpSpawner>();
         asteroidSpawner.dontSpawn = true;
         powerUpSpawner.dontSpawn = true;

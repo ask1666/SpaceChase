@@ -7,7 +7,7 @@ public class JetPackBar : MonoBehaviour {
 
     public Image jetPackBar;
 
-    public float maxJetTime;
+    public static float maxJetTime;
     float timer;
 
     // Start is called before the first frame update

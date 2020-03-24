@@ -12,15 +12,13 @@ using UnityEngine;
 public class PlayerData {
 
     public int highScore;
-    public float gunReloadTime;
-    public float gunRange;
+    public float jetpackDuration;
     public int cash;
     public string playerPrefab;
 
-    public PlayerData (int highScore, float gunReloadTime, float gunRange, int cash, string playerPrefab) {
+    public PlayerData (int highScore, float jetpackDuration, int cash, string playerPrefab) {
         this.highScore = highScore;
-        this.gunReloadTime = gunReloadTime;
-        this.gunRange = gunRange;
+        this.jetpackDuration = jetpackDuration;
         this.cash = cash;
         this.playerPrefab = playerPrefab;
     }

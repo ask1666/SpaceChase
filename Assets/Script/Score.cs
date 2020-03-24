@@ -55,7 +55,7 @@ public class Score : MonoBehaviour {
                     
                 }
             }
-        } else if (scene.name.Equals("Game") || scene.name.Equals("Game2") || scene.name.Equals("Game3")) {
+        } else if (scene.name.Equals("Game") || scene.name.Equals("Game2") || scene.name.Equals("Game3") || scene.name.Equals("MainGame")) {
             previousScene = scene.name;
             earnedCash = 0;
             ammoText = GameObject.Find("AmmoNrText").GetComponent<TextMeshProUGUI>();
@@ -79,7 +79,7 @@ public class Score : MonoBehaviour {
         
 
         SceneManager.sceneLoaded += OnSceneLoaded;
-        if (SceneManager.GetActiveScene().name.Equals("Game") || SceneManager.GetActiveScene().name.Equals("Game2") || SceneManager.GetActiveScene().name.Equals("Game3")) {
+        if (SceneManager.GetActiveScene().name.Equals("Game") || SceneManager.GetActiveScene().name.Equals("Game2") || SceneManager.GetActiveScene().name.Equals("Game3") || SceneManager.GetActiveScene().name.Equals("MainGame")) {
             ammoText.text = "" + ammo;
             scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
             scoreText.text = "Score:\n" + Mathf.RoundToInt(score);

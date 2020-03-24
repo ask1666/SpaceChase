@@ -4841,7 +4841,7 @@ Transform:
   m_GameObject: {fileID: 8711764592729568529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4355187730915641795}
   - {fileID: 8514707187914946789}
@@ -4863,7 +4863,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.027419029, y: 0}
   serializedVersion: 2
-  m_Radius: 1.2128967
+  m_Radius: 0.7
 --- !u!114 &1446856327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4880,6 +4880,7 @@ MonoBehaviour:
   explosion: {fileID: 1926739716468166}
   graphic: {fileID: 4643502362956417782}
   sound: {fileID: 4222466838158965726}
+  speed: 0.012
 --- !u!50 &1060471827
 Rigidbody2D:
   serializedVersion: 4
@@ -4895,7 +4896,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4911,7 +4912,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d4c62f614c6167c4593d5be04e84a31f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 56e0e1b5bec75c645b62e23c25c4d34b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.7
   m_Pitch: 1
@@ -5058,6 +5059,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: d120829cf176a7a4fb28d389c57c31b6,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: d120829cf176a7a4fb28d389c57c31b6,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: d120829cf176a7a4fb28d389c57c31b6,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: d120829cf176a7a4fb28d389c57c31b6,
         type: 3}

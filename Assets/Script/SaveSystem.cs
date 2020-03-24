@@ -34,8 +34,7 @@ public static class SaveSystem {
             GameObject gameControl = GameObject.Find("GameControl");
             gameControl.GetComponent<Score>().highScore = data.highScore;
             gameControl.GetComponent<Score>().cash = data.cash;
-            gameControl.GetComponent<UpgradesProperties>().gunRange = data.gunRange;
-            gameControl.GetComponent<UpgradesProperties>().gunCooldown = data.gunReloadTime;
+            gameControl.GetComponent<UpgradesProperties>().jetpackDuration = data.jetpackDuration;
             gameControl.GetComponent<UpgradesProperties>().playerPrefab = Resources.Load<GameObject>(data.playerPrefab);
 
 

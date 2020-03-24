@@ -7529,6 +7529,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceShip
       objectReference: {fileID: 0}
+    - target: {fileID: 2618978286773450273, guid: 6c4f18bfb126f0549b59869974ee2fa8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2618978286773450275, guid: 6c4f18bfb126f0549b59869974ee2fa8,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -63,7 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Bullet.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
@@ -71,19 +70,22 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
-    <Compile Include="Assets\PlayerSelect.cs" />
     <Compile Include="Assets\Script\AsteroidDestroyer.cs" />
     <Compile Include="Assets\Script\AudioController.cs" />
+    <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\ExplosionHit.cs" />
+    <Compile Include="Assets\Script\ExplosionOnTrigger.cs" />
     <Compile Include="Assets\Script\Gun.cs" />
     <Compile Include="Assets\Script\IntroScript.cs" />
     <Compile Include="Assets\Script\JetPackBar.cs" />
     <Compile Include="Assets\Script\MineExplosion.cs" />
     <Compile Include="Assets\Script\ObstacleExplosion.cs" />
     <Compile Include="Assets\Script\ObstacleSpawn.cs" />
+    <Compile Include="Assets\Script\ObstacleSpawn1.cs" />
     <Compile Include="Assets\Script\Pause.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\PlayerData.cs" />
+    <Compile Include="Assets\Script\PlayerSelect.cs" />
     <Compile Include="Assets\Script\PlayerSpawner.cs" />
     <Compile Include="Assets\Script\PowerUpExplosion.cs" />
     <Compile Include="Assets\Script\PowerUpSpawner.cs" />

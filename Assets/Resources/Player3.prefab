@@ -481,8 +481,8 @@ MonoBehaviour:
   - {fileID: 2995756629306951511}
   - {fileID: 2995756629979844803}
   m_Bounds:
-    m_Center: {x: -0.0046150684, y: 0.027434826, z: 0}
-    m_Extent: {x: 2.1946151, y: 2.2653704, z: 0}
+    m_Center: {x: -0.00461483, y: 0.027434826, z: 0}
+    m_Extent: {x: 2.194615, y: 2.2653704, z: 0}
   m_UseBatching: 1
 --- !u!1 &2995756629039329392
 GameObject:
@@ -734,7 +734,7 @@ Transform:
   m_GameObject: {fileID: 2995756630364095696}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.5, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 9042514170281268302}
   - {fileID: 2995756628971571016}
@@ -774,8 +774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee3a31ea0619ec4982523813879536b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  variableJoystick: {fileID: 0}
 --- !u!70 &2995756630364095702
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

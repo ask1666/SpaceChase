@@ -13,6 +13,7 @@ public class ObstacleExplosion : MonoBehaviour {
     public GameObject graphic;
     public AudioSource sound;
     private float timeSinceExploded = 0.4f;
+    public float speed;
 
     // Start is called before the first frame update
     void Start() {
@@ -29,18 +30,24 @@ public class ObstacleExplosion : MonoBehaviour {
             StartCoroutine(doExplosion());
         }
 
+        GetComponent<Rigidbody2D>().AddForce(Vector2.down * speed, ForceMode2D.Impulse);
+
     }
 
     IEnumerator doExplosion() {
 
-        Destroy(graphic);
+        
         GetComponent<Rigidbody2D>().freezeRotation = true;
         GetComponent<Collider2D>().enabled = false;
         explosion.Play();
         sound.Play();
+        
+        Destroy(this.graphic);
         yield return new WaitForSeconds(0.4f);
-        Destroy(this.gameObject);
 
+        
+        Destroy(this.gameObject);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
@@ -62,7 +69,7 @@ public class ObstacleExplosion : MonoBehaviour {
         score.cash += Mathf.RoundToInt(score.score) / 10;
         score.earnedCash += Mathf.RoundToInt(score.score) / 10;
         UpgradesProperties UP = GameObject.Find("GameControl").GetComponent<UpgradesProperties>();
-        PlayerData playerData = new PlayerData(score.highScore, UP.gunCooldown, UP.gunRange, score.cash, UP.playerPrefab.name);
+        PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration, score.cash, UP.playerPrefab.name);
         SaveSystem.SavePlayerData(playerData);
         SceneManager.LoadScene("DeathScreen");
     }
