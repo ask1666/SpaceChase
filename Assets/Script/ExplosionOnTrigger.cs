@@ -20,6 +20,8 @@ public class ExplosionOnTrigger : MonoBehaviour {
             collision.gameObject.GetComponent<ObstacleExplosion>().explode = true;
         } else if (collision.gameObject.tag.Equals("Garbage")) {
             collision.gameObject.GetComponent<ObstacleExplosion>().explode = true;
-        } 
+        } else if (collision.gameObject.tag.Equals("Enemy")) {
+            collision.gameObject.GetComponent<EnemyController>().Die();
+        }
     }
 }

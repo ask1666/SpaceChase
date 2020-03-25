@@ -72,10 +72,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 881, y: 492}
-  m_MaxSize: {x: 16006, y: 14042}
+  m_MinSize: {x: 880, y: 492}
+  m_MaxSize: {x: 16005, y: 14042}
   vertical: 1
-  controlID: 123
+  controlID: 111
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -123,10 +123,10 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 947
-  m_MinSize: {x: 881, y: 492}
-  m_MaxSize: {x: 16006, y: 14042}
+  m_MinSize: {x: 880, y: 492}
+  m_MaxSize: {x: 16005, y: 14042}
   vertical: 0
-  controlID: 124
+  controlID: 112
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,8 +146,8 @@ MonoBehaviour:
     y: 0
     width: 378
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -170,7 +170,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 201
+    width: 293
     height: 676
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 492}
   m_MaxSize: {x: 12005, y: 14042}
   vertical: 1
-  controlID: 125
+  controlID: 113
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -296,7 +296,7 @@ MonoBehaviour:
   m_MinSize: {x: 605, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 126
+  controlID: 114
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -312,12 +312,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 201
+    x: 293
     y: 0
-    width: 850
+    width: 758
     height: 676
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -593,11 +593,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 16f5d7602895b34408df0337f4fed03f,
+  m_AnimatorController: {fileID: 9100000, guid: 15e758bb18aad9c438161ec381f54da8,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 3349281127560817280, guid: 16f5d7602895b34408df0337f4fed03f,
-      type: 2}
+  - m_Target: {fileID: 110762900, guid: 15e758bb18aad9c438161ec381f54da8, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -638,7 +637,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 32766
+  m_LastSelectedObjectID: -19668
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -704,20 +703,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 76
   m_LastFolders:
-  - Assets/Script
+  - Assets/Scenes
   m_LastFoldersGridSize: 76
   m_LastProjectPath: C:\Users\geeky\Documents\UnityProjects\SpaceChase
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 94}
-    m_SelectedIDs: 88450000
-    m_LastClickedID: 17800
-    m_ExpandedIDs: 000000007a4500007c4500007e45000080450000824500008445000086450000884500008a45000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 64470000
+    m_LastClickedID: 18276
+    m_ExpandedIDs: 000000000045000004450000584700005a4700005c4700005e470000604700006247000064470000b847000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -745,7 +744,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 1279}
     m_SelectedIDs: 44430000
     m_LastClickedID: 17220
-    m_ExpandedIDs: 000000007a4500007c4500007e45000080450000824500008445000086450000884500008a450000
+    m_ExpandedIDs: 000000000045000004450000584700005a4700005c4700005e470000604700006247000064470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -772,7 +771,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000070350000acb8ffff0644000056540000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -862,7 +861,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1920
     y: 73
-    width: 200
+    width: 292
     height: 655
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
@@ -870,21 +869,21 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a6bfffffbabfffff64c1ffff6ec1ffff7cc1ffffe0c1ffff1ec2ffff62c2fffff8c2ffff5ac3ffffd0c3ffffe2c3ffffeec7ffff5acaffff34e6ffff50e9ffff34edffffbef9ffff6cfbffff
+      m_ExpandedIDs: 4480ffff5880ffff0682ffff1482ffff2682ffff8e82ffffd082ffff1883ffffb283ffff1884ffff9284ffffa884ffff3885ffffd085ffffa689ffff7e8effff1a93ffff9e98ffff1ab4ffff1eb4ffff32b4ffff4cb4ffffacb4ffffbab7ffffbeb7ffffc2b7ffffcab7ffffceb7ffffd6b7fffff0b7ffff50b8ffffa0bcffffaef8ffff1ef9ffffd4f9ffff84faffff6cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: EnemySpaceShip
+        m_OriginalName: EnemySpaceShip
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 22900
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -915,14 +914,14 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1719
+    x: -1627
     y: 73
-    width: 848
+    width: 756
     height: 655
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 03b4e43d73230e5b1b7552a5523f3dc1
-  m_Gizmos: 0
+  m_Gizmos: 1
   m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 1
@@ -984,7 +983,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 15.207192
     speed: 2
-    m_Value: 14.552338
+    m_Value: 15.207192
   m_Ortho:
     m_Target: 1
     speed: 2

@@ -36,10 +36,10 @@ public class PlayerController : MonoBehaviour {
 
        
 
-        if (Input.GetKeyDown(KeyCode.A) && !swipeRight) {
+        if (Input.GetKeyDown(KeyCode.A) && !swipeRight && !swipeLeft) {
             swipeLeft = true;
             startMovePos = transform.position.x;
-        } else if (Input.GetKeyDown(KeyCode.D) && !swipeLeft) {
+        } else if (Input.GetKeyDown(KeyCode.D) && !swipeLeft && !swipeRight) {
             swipeRight = true;
             startMovePos = transform.position.x;
         }
@@ -69,10 +69,10 @@ public class PlayerController : MonoBehaviour {
                 if (Mathf.Abs(lp.x - fp.x) > dragDistance || Mathf.Abs(lp.y - fp.y) > dragDistance) {//It's a drag
                                                                                                      //check if the drag is vertical or horizontal
                     if (Mathf.Abs(lp.x - fp.x) > Mathf.Abs(lp.y - fp.y)) {   //If the horizontal movement is greater than the vertical movement...
-                        if ((lp.x > fp.x) && !swipeLeft) {
+                        if ((lp.x > fp.x) && !swipeLeft && !swipeRight) {
                             swipeRight = true;
                             startMovePos = transform.position.x;
-                        } else if (!(lp.x > fp.x) && !swipeRight) {
+                        } else if (!(lp.x > fp.x) && !swipeRight && !swipeLeft) {
                             swipeLeft = true;
                             startMovePos = transform.position.x;
                         }
@@ -92,7 +92,6 @@ public class PlayerController : MonoBehaviour {
     private void SwipeRight() {
         if (transform.position.x >= 1f || transform.position.x >= startMovePos + 1.5f) {
             swipeRight = false;
-            Debug.Log("right: " + swipeRight);
         } else
             transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(startMovePos + 1.5f, transform.position.y), Time.deltaTime * speed);
     }
@@ -100,7 +99,6 @@ public class PlayerController : MonoBehaviour {
     private void SwipeLeft() {
         if (transform.position.x <= -2f || transform.position.x <= startMovePos - 1.5f) {
             swipeLeft = false;
-            Debug.Log("left: " + swipeRight);
         } else
             transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(startMovePos - 1.5f, transform.position.y), Time.deltaTime * speed);
     }

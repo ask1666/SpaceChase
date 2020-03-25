@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2800007844626501765}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BulletSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 5876263594548013839}
   - component: {fileID: 4929335072694253831}
   - component: {fileID: 7017057994891910169}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Astronaut3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5536800359177420481}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 552052861046348751}
   - component: {fileID: 6683172560932335727}
   - component: {fileID: 5670006987960580841}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SparkParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4998,7 +4998,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3110741840267518000}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5029,7 +5029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5044231701833804626}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5060,7 +5060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8559299649731700160}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5093,7 +5093,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 323584355317117739}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5125,7 +5125,7 @@ GameObject:
   - component: {fileID: 4876051768052459766}
   - component: {fileID: 3917669317318620118}
   - component: {fileID: 1953825603432916332}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SmokeParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9935,7 +9935,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4053066688376030467}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9966,7 +9966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8447864229024909888}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9996,7 +9996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7509305748240244370}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10031,7 +10031,7 @@ GameObject:
   - component: {fileID: 6840445878928946602}
   - component: {fileID: 1206154597273404399}
   - component: {fileID: 6134049035855961438}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14978,7 +14978,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 11236812240412709}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15008,7 +15008,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1440399374922654361}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15039,7 +15039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6606744938642434673}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15070,7 +15070,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5815886380989972831}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15107,7 +15107,7 @@ GameObject:
   - component: {fileID: 7147066480497049936}
   - component: {fileID: 7147066480497049938}
   - component: {fileID: 676589964128321320}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -15354,7 +15354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4752485037624486283}
   - component: {fileID: 1593929683763414000}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PistolGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15436,7 +15436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8752246362452485123}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15474,6 +15474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119941585766585113, guid: b1c3dff74e1f6b549879e529f08c7b58,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6119941585766585318, guid: b1c3dff74e1f6b549879e529f08c7b58,
         type: 3}

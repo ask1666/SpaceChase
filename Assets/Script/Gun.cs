@@ -39,16 +39,16 @@ public class Gun : MonoBehaviour {
         Debug.DrawRay(new Vector2(transform.position.x -0f, transform.position.y), Vector2.up * beamRange, Color.green);
 
         RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 0f, transform.position.y), Vector2.up * beamRange);
-
+        
         if (hit.collider != null) {
             float distance = Mathf.Abs(hit.point.y - transform.position.y);
-            if (hit.collider.gameObject.tag == "Asteroid" && lr.enabled == true && distance <= beamRange) {
+            if (hit.collider.gameObject.tag.Equals("Asteroid") && lr.enabled == true && distance <= beamRange) {
                 hit.collider.gameObject.GetComponent<ObstacleExplosion>().explode = true;
             } 
-            if (hit.collider.gameObject.tag == "Mine" && lr.enabled == true && distance <= beamRange) {
+            if (hit.collider.gameObject.tag.Equals("Mine") && lr.enabled == true && distance <= beamRange) {
                 hit.collider.gameObject.GetComponent<MineExplosion>().explode = true;
             }
-            if (hit.collider.gameObject.tag == "Garbage" && lr.enabled == true && distance <= beamRange) {
+            if (hit.collider.gameObject.tag.Equals("Garbage") && lr.enabled == true && distance <= beamRange) {
                 hit.collider.gameObject.GetComponent<ObstacleExplosion>().explode = true;
             }
             if (hit.collider.gameObject.tag.Equals("Enemy") && lr.enabled == true && distance <= beamRange) {

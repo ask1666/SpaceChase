@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3859976458152054436}
   - component: {fileID: 559510579994154799}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BazookaGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5891819976864183363}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5891819977171155832}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5891819977529426466}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5891819977720482457}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5891819977733326796}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5891819977850863492}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5891819977948154562}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 5891819978171365825}
   - component: {fileID: 5891819978171365826}
   - component: {fileID: 5891819978171365827}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CharacterGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5891819978243343079}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5891819978243939409}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,7 +482,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5891819978355458336}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 5891819978611974161}
   - component: {fileID: 5891819978611974160}
   - component: {fileID: 5689415658393391433}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player4
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -713,7 +713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5891819978754101057}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -744,7 +744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6722851588500419364}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MissileSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 1988306579097238029}
   - component: {fileID: 2297188052406131449}
   - component: {fileID: 7732504798454960861}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bazooka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -931,6 +931,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6119941585766585113, guid: b1c3dff74e1f6b549879e529f08c7b58,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6119941585766585318, guid: b1c3dff74e1f6b549879e529f08c7b58,
         type: 3}

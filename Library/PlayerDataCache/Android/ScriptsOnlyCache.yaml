@@ -641,6 +641,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14536}
     - Class: 114
+      Script: {instanceID: 14752}
+    - Class: 114
       Script: {instanceID: 15016}
     - Class: 114
       Script: {instanceID: 15172}
@@ -1499,7 +1501,7 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
-      Hash: 8aedd6ef43fca3e6b89d1514080fd449
+      Hash: bcd2fff881007579f66e17c7c8ad1510
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UpgradesProperties
@@ -1697,7 +1699,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: 30e533fccaf100473458592ef0fa540f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyController

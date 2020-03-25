@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour {
     
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (this.gameObject.name.Equals("Missile")) {
+        if (this.gameObject.tag.Equals("Missile")) {
             if (collision.gameObject.tag.Equals("Asteroid") || collision.gameObject.tag.Equals("Garbage")) {
                 collision.gameObject.GetComponent<ObstacleExplosion>().explode = true;
                 explosion.SetTrigger("explode");

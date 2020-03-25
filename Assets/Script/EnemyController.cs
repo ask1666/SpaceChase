@@ -6,6 +6,9 @@ public class EnemyController : MonoBehaviour {
 
     
     public float speed;
+    public Animator anim;
+    public GameObject graphic;
+    public ParticleSystem flames;
 
     // Start is called before the first frame update
     void Start() {
@@ -17,15 +20,18 @@ public class EnemyController : MonoBehaviour {
     }
 
     public void Die() {
-        Destroy(this.gameObject);
+        Destroy(graphic);
+        flames.Stop();
+        anim.SetTrigger("explode");
+        Destroy(this.gameObject, 1f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.tag.Equals("Enemy")) {
             if (this.transform.position.y > collision.transform.position.y) {
-                Die();
+                Destroy(this.gameObject);
             } else {
-                collision.gameObject.GetComponent<EnemyController>().Die();
+                Destroy(collision.gameObject);
             }
         }
     }
