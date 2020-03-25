@@ -19,11 +19,12 @@ public class PlayerController : MonoBehaviour {
     private bool swipeLeft;
 
 
-    private float startPos;
+    private float startMovePos;
 
     void Start() {
         
         dragDistance = Screen.height * 5 / 100; //dragDistance is 7% height of the screen
+        
     }
     void Update() {
         
@@ -37,10 +38,10 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.A) && !swipeRight) {
             swipeLeft = true;
-            startPos = transform.position.x;
+            startMovePos = transform.position.x;
         } else if (Input.GetKeyDown(KeyCode.D) && !swipeLeft) {
             swipeRight = true;
-            startPos = transform.position.x;
+            startMovePos = transform.position.x;
         }
 
         if (swipeLeft) {
@@ -70,10 +71,10 @@ public class PlayerController : MonoBehaviour {
                     if (Mathf.Abs(lp.x - fp.x) > Mathf.Abs(lp.y - fp.y)) {   //If the horizontal movement is greater than the vertical movement...
                         if ((lp.x > fp.x) && !swipeLeft) {
                             swipeRight = true;
-                            startPos = transform.position.x;
+                            startMovePos = transform.position.x;
                         } else if (!(lp.x > fp.x) && !swipeRight) {
                             swipeLeft = true;
-                            startPos = transform.position.x;
+                            startMovePos = transform.position.x;
                         }
                     } else {   //the vertical movement is greater than the horizontal movement
                         if (lp.y > fp.y)  //If the movement was up
@@ -89,19 +90,19 @@ public class PlayerController : MonoBehaviour {
 
 
     private void SwipeRight() {
-        if (transform.position.x >= 1.7f || transform.position.x >= startPos + 1.7f) {
+        if (transform.position.x >= 1f || transform.position.x >= startMovePos + 1.5f) {
             swipeRight = false;
+            Debug.Log("right: " + swipeRight);
         } else
-            transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(transform.position.x + 1.7f, transform.position.y), Time.deltaTime * speed);
-            //transform.Translate(new Vector2( 1.7f, 0));
+            transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(startMovePos + 1.5f, transform.position.y), Time.deltaTime * speed);
     }
 
     private void SwipeLeft() {
-        if (transform.position.x <= -1.7f || transform.position.x <= startPos - 1.7f) {
+        if (transform.position.x <= -2f || transform.position.x <= startMovePos - 1.5f) {
             swipeLeft = false;
+            Debug.Log("left: " + swipeRight);
         } else
-            transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(transform.position.x - 1.7f, transform.position.y), Time.deltaTime * speed);
-        //transform.Translate(new Vector2( - 1.7f, 0));
+            transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(startMovePos - 1.5f, transform.position.y), Time.deltaTime * speed);
     }
 
 

@@ -481,8 +481,8 @@ MonoBehaviour:
   - {fileID: 2995756629306951511}
   - {fileID: 2995756629979844803}
   m_Bounds:
-    m_Center: {x: -0.00461483, y: 0.027434826, z: 0}
-    m_Extent: {x: 2.194615, y: 2.2653704, z: 0}
+    m_Center: {x: -0.0046150684, y: 0.027434826, z: 0}
+    m_Extent: {x: 2.1946151, y: 2.2653704, z: 0}
   m_UseBatching: 1
 --- !u!1 &2995756629039329392
 GameObject:
@@ -734,7 +734,7 @@ Transform:
   m_GameObject: {fileID: 2995756630364095696}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.5, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 9042514170281268302}
   - {fileID: 2995756628971571016}
@@ -787,8 +787,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.26437032, y: -0.13887191}
-  m_Size: {x: 1.0270545, y: 2.0806503}
+  m_Offset: {x: 0.83384883, y: -0.094497204}
+  m_Size: {x: 2.1660116, y: 2.905593}
   m_Direction: 0
 --- !u!82 &2995756630364095703
 AudioSource:

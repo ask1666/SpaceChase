@@ -10,11 +10,13 @@ public class UpgradesProperties : MonoBehaviour {
 
     public float jetpackDuration;
     public float movementSpeed;
-    public GameObject playerPrefab;
+    public string playerName;
+    public GameObject[] playerModels;
+    public GameObject selectedPlayer;
 
     // Start is called before the first frame update
     void Start() {
-        
+
         
     }
 
@@ -22,6 +24,11 @@ public class UpgradesProperties : MonoBehaviour {
     void Update() {
 
         SceneManager.activeSceneChanged += ChangedActiveScene;
+        for (int i = 0; i < playerModels.Length; i++) {
+            if (playerModels[i].name.Equals(playerName)) {
+                selectedPlayer = playerModels[i];
+            }
+        }
 
     }
 

@@ -35,7 +35,7 @@ public static class SaveSystem {
             gameControl.GetComponent<Score>().highScore = data.highScore;
             gameControl.GetComponent<Score>().cash = data.cash;
             gameControl.GetComponent<UpgradesProperties>().jetpackDuration = data.jetpackDuration;
-            gameControl.GetComponent<UpgradesProperties>().playerPrefab = Resources.Load<GameObject>(data.playerPrefab);
+            gameControl.GetComponent<UpgradesProperties>().playerName = data.playerPrefab;
             gameControl.GetComponent<UpgradesProperties>().movementSpeed = data.movementSpeed;
 
 

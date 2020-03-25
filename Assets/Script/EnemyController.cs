@@ -19,4 +19,14 @@ public class EnemyController : MonoBehaviour {
     public void Die() {
         Destroy(this.gameObject);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag.Equals("Enemy")) {
+            if (this.transform.position.y > collision.transform.position.y) {
+                Die();
+            } else {
+                collision.gameObject.GetComponent<EnemyController>().Die();
+            }
+        }
+    }
 }

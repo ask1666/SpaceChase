@@ -85,7 +85,7 @@ public class UpgradesOnClick : MonoBehaviour {
 
     public void onClickJetpackDuration() {
         if (!jetPackMaxed) {
-            PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration + jetpackDurationIncrease, score.cash - jetpackDurationCost, UP.playerPrefab.name, UP.movementSpeed);
+            PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration + jetpackDurationIncrease, score.cash - jetpackDurationCost, UP.playerName, UP.movementSpeed);
             SaveSystem.SavePlayerData(playerData);
             SaveSystem.LoadPlayerData();
             Debug.Log("saved");
@@ -95,7 +95,7 @@ public class UpgradesOnClick : MonoBehaviour {
 
     public void onClickMovementSpeed() {
         if (!movementSpeedMaxed) {
-            PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration, score.cash - movementSpeedCost, UP.playerPrefab.name, UP.movementSpeed + movementSpeedIncrease);
+            PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration, score.cash - movementSpeedCost, UP.playerName, UP.movementSpeed + movementSpeedIncrease);
             SaveSystem.SavePlayerData(playerData);
             SaveSystem.LoadPlayerData();
             Debug.Log("saved");

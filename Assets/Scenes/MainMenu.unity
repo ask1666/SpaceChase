@@ -407,10 +407,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 222542a6805342844b9467e0b8ea53de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunRange: 3
-  gunCooldown: 1
-  playerPrefab: {fileID: 6357729284211210153, guid: b59e121d900224b4491d92854d550e81,
-    type: 3}
+  jetpackDuration: 0
+  movementSpeed: 0
+  playerName: 
+  playerModels:
+  - {fileID: 7147066480497049939, guid: 73ca825532fcafa48bb66081607b9853, type: 3}
+  - {fileID: 2995756630364095696, guid: bf3610cbe0f63474ca1de5d2ea49cf7f, type: 3}
+  - {fileID: 5891819978611974190, guid: c174418652abf2349bf49acaa52f785f, type: 3}
+  - {fileID: 6357729284211210153, guid: b59e121d900224b4491d92854d550e81, type: 3}
+  selectedPlayer: {fileID: 0}
 --- !u!1001 &322603383
 PrefabInstance:
   m_ObjectHideFlags: 0

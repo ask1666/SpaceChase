@@ -11,7 +11,7 @@ public class PlayerSpawner : MonoBehaviour {
     void Awake() {
         
         try {
-            playerPrefab = GameObject.Find("GameControl").GetComponent<UpgradesProperties>().playerPrefab;
+            playerPrefab = GameObject.Find("GameControl").GetComponent<UpgradesProperties>().selectedPlayer;
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player == null) {
                 //Spawn Selected Loadout
