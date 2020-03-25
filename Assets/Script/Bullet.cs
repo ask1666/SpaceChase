@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour {
     
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        try {
+        if (this.gameObject.name.Equals("Missile")) {
             if (collision.gameObject.tag.Equals("Asteroid") || collision.gameObject.tag.Equals("Garbage")) {
                 collision.gameObject.GetComponent<ObstacleExplosion>().explode = true;
                 explosion.SetTrigger("explode");
@@ -47,15 +47,19 @@ public class Bullet : MonoBehaviour {
                 explosion.SetTrigger("explode");
                 explode = true;
             }
-        } catch (UnassignedReferenceException) {
+
+        } else {
+
             if (collision.gameObject.tag.Equals("Asteroid") || collision.gameObject.tag.Equals("Garbage")) {
                 collision.gameObject.GetComponent<ObstacleExplosion>().explode = true;
-                Destroy(this);
+                Destroy(this.gameObject);
             } else if (collision.gameObject.tag.Equals("Mine")) {
                 collision.gameObject.GetComponent<MineExplosion>().explode = true;
-                Destroy(this);
+                Destroy(this.gameObject);
             } else if (collision.gameObject.tag.Equals("Enemy")) {
-                Destroy(this);
+                collision.gameObject.GetComponent<EnemyController>().Die();
+                Destroy(this.gameObject);
+
             }
         }
     }

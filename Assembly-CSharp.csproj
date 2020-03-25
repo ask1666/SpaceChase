@@ -63,9 +63,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EnemyBullet.cs" />
-    <Compile Include="Assets\EnemyController.cs" />
-    <Compile Include="Assets\EnemyShoot.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
@@ -76,6 +73,9 @@
     <Compile Include="Assets\Script\AsteroidDestroyer.cs" />
     <Compile Include="Assets\Script\AudioController.cs" />
     <Compile Include="Assets\Script\Bullet.cs" />
+    <Compile Include="Assets\Script\EnemyBullet.cs" />
+    <Compile Include="Assets\Script\EnemyController.cs" />
+    <Compile Include="Assets\Script\EnemyShoot.cs" />
     <Compile Include="Assets\Script\ExplosionHit.cs" />
     <Compile Include="Assets\Script\ExplosionOnTrigger.cs" />
     <Compile Include="Assets\Script\Gun.cs" />

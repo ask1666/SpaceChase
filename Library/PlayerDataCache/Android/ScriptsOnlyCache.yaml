@@ -2290,13 +2290,13 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
-  - Assets/Scenes/MainGame.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/Game2.unity
   - Assets/Scenes/Game3.unity
   - Assets/Scenes/DeathScreen.unity
-  - Assets/Scenes/Upgrades.unity
-  - Assets/Scenes/Reset.unity
   - Assets/Scenes/LevelSelect.unity
+  - Assets/Scenes/MainGame.unity
   - Assets/Scenes/PlayerSelect.unity
+  - Assets/Scenes/Reset.unity
+  - Assets/Scenes/Upgrades.unity
   playerPath: C:/Users/geeky/Documents/UnityProjects/SpaceChase/build1.apk

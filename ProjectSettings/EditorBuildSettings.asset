@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: a176a6eee6eb87b428795ffd0dae9b1c
   - enabled: 1
-    path: Assets/Scenes/MainGame.unity
-    guid: e2c7372913d87ca438e6c2053fb322df
-  - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 874cf4e783c7e4c46bfac44047d3e88d
   - enabled: 1
@@ -24,15 +21,18 @@ EditorBuildSettings:
     path: Assets/Scenes/DeathScreen.unity
     guid: 786b62c576e9c67479d6a8077510729b
   - enabled: 1
-    path: Assets/Scenes/Upgrades.unity
-    guid: 539727a58a8035a40824002243820d20
+    path: Assets/Scenes/LevelSelect.unity
+    guid: be52101857218034db5db997cc14802b
+  - enabled: 1
+    path: Assets/Scenes/MainGame.unity
+    guid: e2c7372913d87ca438e6c2053fb322df
+  - enabled: 1
+    path: Assets/Scenes/PlayerSelect.unity
+    guid: 7837448cca13c854d8933724233c29cf
   - enabled: 1
     path: Assets/Scenes/Reset.unity
     guid: 9d6697c7f0d0fac478ff1ada4473d2f9
   - enabled: 1
-    path: Assets/Scenes/LevelSelect.unity
-    guid: be52101857218034db5db997cc14802b
-  - enabled: 1
-    path: Assets/Scenes/PlayerSelect.unity
-    guid: 7837448cca13c854d8933724233c29cf
+    path: Assets/Scenes/Upgrades.unity
+    guid: 539727a58a8035a40824002243820d20
   m_configObjects: {}
