@@ -950,6 +950,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11538}
     - Class: 114
+      Script: {instanceID: 11974}
+    - Class: 114
       Script: {instanceID: 12038}
     - Class: 114
       Script: {instanceID: 12068}
@@ -1250,7 +1252,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: a47bd59d7e1d2e4c666a34527b45957b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerSelect
@@ -2132,7 +2134,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerEnumHistory
   - hash:
       serializedVersion: 2
-      Hash: 848cd5f51c028ba964bb4b66700cdd62
+      Hash: e68e9593fb0babc3af63aca02ac768c9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SkyBoxScroll
@@ -2346,6 +2348,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: c5c598a6ef61b2596fd6c07a8f082861
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ViewportHandler
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

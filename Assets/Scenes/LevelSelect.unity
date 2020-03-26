@@ -1175,6 +1175,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c070ce2a85f17c4b9287c48d6478230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 0}
+  loadingIcon: {fileID: 0}
+  loadingIconSpeed: 0
 --- !u!4 &767366805
 Transform:
   m_ObjectHideFlags: 0
@@ -11681,7 +11684,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -11911,7 +11914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 2312, y: 1080}

@@ -5,28 +5,37 @@ using UnityEngine;
 
 public class SkyBoxScroll : MonoBehaviour {
 
-    public GameObject skyBox;
+    public GameObject skyBox1, skyBox2, skyBoxToSpawn;
     public float speed;
     private GameObject currentSkyBox = null;
     private GameObject newSkyBox = null;
 
     public float startPos, endPos;
+    Score score;
 
     // Start is called before the first frame update
     void Start() {
-        newSkyBox = Instantiate(skyBox, new Vector3(0, -endPos, 1f), Quaternion.identity);
+        skyBoxToSpawn = skyBox1;
+        newSkyBox = Instantiate(skyBoxToSpawn, new Vector3(0, -endPos, 1f), Quaternion.identity);
         currentSkyBox = null;
+
+        score = GameObject.Find("GameControl").GetComponent<Score>();
     }
 
     // Update is called once per frame
     void Update() {
-        
+        if (score.score >= 200) {
+            skyBoxToSpawn = skyBox2;
+        }
+
         if (newSkyBox.transform.position.y <= endPos) {
             currentSkyBox = newSkyBox;
-            newSkyBox = Instantiate(skyBox, new Vector3(0, startPos, 1f), Quaternion.identity);
+            newSkyBox = Instantiate(skyBoxToSpawn, new Vector3(0, startPos, 1f), Quaternion.identity);
 
         }
+
         newSkyBox.transform.Translate(Vector2.down * speed);
+
         try {
             currentSkyBox.transform.Translate(Vector2.down * speed);
 
