@@ -84,7 +84,7 @@ public class UpgradesOnClick : MonoBehaviour {
     }
 
     public void onClickJetpackDuration() {
-        if (!jetPackMaxed || score.cash >= jetpackDurationCost) {
+        if (!jetPackMaxed && score.cash >= jetpackDurationCost) {
             PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration + jetpackDurationIncrease, score.cash - jetpackDurationCost, UP.playerName, UP.movementSpeed);
             SaveSystem.SavePlayerData(playerData);
             SaveSystem.LoadPlayerData();
@@ -94,7 +94,7 @@ public class UpgradesOnClick : MonoBehaviour {
     }
 
     public void onClickMovementSpeed() {
-        if (!movementSpeedMaxed || score.cash >= movementSpeedCost) {
+        if (!movementSpeedMaxed && score.cash >= movementSpeedCost) {
             PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration, score.cash - movementSpeedCost, UP.playerName, UP.movementSpeed + movementSpeedIncrease);
             SaveSystem.SavePlayerData(playerData);
             SaveSystem.LoadPlayerData();
