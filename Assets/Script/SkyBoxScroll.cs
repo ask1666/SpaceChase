@@ -24,7 +24,7 @@ public class SkyBoxScroll : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (score.score >= 200) {
+        if (score.score >= 100) {
             skyBoxToSpawn = skyBox2;
         }
 
