@@ -4976,7 +4976,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2498389231301852710, guid: 7fedfc9f3a9bd4c44ae71fb82b77733f, type: 3}
   bulletSpawnPos: {fileID: 1524652931452430698}
-  shootColdown: 4
+  maxT: 4
+  minT: 0.5
+  t: 0.03
 --- !u!114 &18361164
 MonoBehaviour:
   m_ObjectHideFlags: 0

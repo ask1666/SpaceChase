@@ -6,9 +6,13 @@ using UnityEngine;
 public class SkyBoxScroll : MonoBehaviour {
 
     public GameObject skyBox1, skyBox2, skyBoxToSpawn;
-    public float speed;
+    private float speed;
     private GameObject currentSkyBox = null;
     private GameObject newSkyBox = null;
+
+
+    public float maxSpeed, minSpeed, tt;
+    private float t;
 
     public float startPos, endPos;
     Score score;
@@ -24,7 +28,11 @@ public class SkyBoxScroll : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (score.score >= 100) {
+
+        t += Time.deltaTime;
+        speed = Mathf.Lerp(minSpeed, maxSpeed, t * tt);
+
+        if (score.score >= 200) {
             skyBoxToSpawn = skyBox2;
         }
 

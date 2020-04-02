@@ -14,6 +14,7 @@ public class EnemyBullet : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         transform.Translate(Vector2.down * speed);
+        Destroy(this.gameObject, 8f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {

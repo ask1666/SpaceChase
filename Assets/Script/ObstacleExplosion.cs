@@ -13,7 +13,7 @@ public class ObstacleExplosion : MonoBehaviour {
     public GameObject graphic;
     public AudioSource sound;
     private float timeSinceExploded = 0.4f;
-    public float speed;
+    public static float speed;
 
     // Start is called before the first frame update
     void Start() {

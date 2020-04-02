@@ -842,7 +842,11 @@ MonoBehaviour:
   minimum: 0.8
   maximum: 3
   releaseCooldown: 3
+  spawnEnemyScore: 200
   dontSpawn: 1
+  maxSpeed: 0.05
+  minSpeed: 0.018
+  tt: 0.01
 --- !u!1001 &697370253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1390,7 +1394,9 @@ MonoBehaviour:
   skyBox1: {fileID: 8759845314562200943, guid: e4a949969c08988479999ba57c5de23b, type: 3}
   skyBox2: {fileID: 425709343430844104, guid: 178bba3449acbe440afc7846467c9fe2, type: 3}
   skyBoxToSpawn: {fileID: 0}
-  speed: 0.008
+  maxSpeed: 0.05
+  minSpeed: 0.008
+  tt: 0.01
   startPos: 20
   endPos: -10
 --- !u!81 &853938772

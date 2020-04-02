@@ -6,8 +6,9 @@ public class EnemyShoot : MonoBehaviour {
 
     public GameObject bullet;
     public Transform bulletSpawnPos;
-    public float shootColdown;
     private float timer;
+    public float maxT, minT, tt;
+    private float shootCooldown, t;
 
 
     // Start is called before the first frame update
@@ -17,8 +18,13 @@ public class EnemyShoot : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+
         timer += Time.deltaTime;
-        if (timer > shootColdown) {
+        t += Time.deltaTime;
+        shootCooldown = Mathf.Lerp(maxT, minT, t * tt);
+
+        if (timer > shootCooldown) {
             Instantiate(bullet, bulletSpawnPos.position, Quaternion.identity);
             timer = Time.deltaTime;
         }

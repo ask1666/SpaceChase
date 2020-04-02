@@ -6,10 +6,13 @@ public class ObstacleSpawn1 : MonoBehaviour {
     public GameObject[] obstacles;
     private List<GameObject> obstaclesToSpawn;
     public float[] chances;
-    public float minimum, maximum, releaseCooldown;
+    public float minimum, maximum, releaseCooldown, spawnEnemyScore;
     public bool dontSpawn = true;
     private float timer;
     private float t;
+
+    public float maxSpeed, minSpeed, tt;
+    private float speed;
     Score score;
 
     // Start is called before the first frame update
@@ -23,13 +26,19 @@ public class ObstacleSpawn1 : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (score.score >= 200) {
+
+        if (score.score >= spawnEnemyScore) {
             obstaclesToSpawn.Clear();
             obstaclesToSpawn.AddRange(obstacles);
         }
+
         timer += Time.deltaTime;
-        releaseCooldown = Mathf.Lerp(maximum, minimum, 0.01f * t);
+
         t += Time.deltaTime;
+        releaseCooldown = Mathf.Lerp(maximum, minimum, 0.01f * t);
+        speed = Mathf.Lerp(minSpeed, maxSpeed, t * tt);
+        ObstacleExplosion.speed = speed;
+
         if (timer > releaseCooldown) {
             if (Random.Range(0.0f, 1.0f) >= (1 - chances[Random.Range(0,chances.Length)])) {
                 GameObject obstacleSpawned1 = Instantiate<GameObject>(obstaclesToSpawn[Random.Range(0, obstaclesToSpawn.Count)], new Vector3(-1.7f, 6.34f, 0), Quaternion.identity);
