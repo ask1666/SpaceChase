@@ -6,10 +6,12 @@ using UnityEngine;
 public class SkyBoxScroll : MonoBehaviour {
 
     public GameObject skyBox1, skyBox2, skyBoxToSpawn;
-    private float speed;
+    private float speed, speed2;
     private GameObject currentSkyBox = null;
     private GameObject newSkyBox = null;
 
+    public ParticleSystem spaceDust;
+    public float maxSpeed2, minSpeed2, tt2;
 
     public float maxSpeed, minSpeed, tt;
     private float t;
@@ -29,8 +31,12 @@ public class SkyBoxScroll : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
+        ParticleSystem.MainModule spaceDustMain = spaceDust.main;
+
         t += Time.deltaTime;
         speed = Mathf.Lerp(minSpeed, maxSpeed, t * tt);
+        speed2 = Mathf.Lerp(maxSpeed2, minSpeed2, t * tt2);
+        spaceDustMain.startSpeed = new ParticleSystem.MinMaxCurve(speed2);
 
         if (score.score >= 200) {
             skyBoxToSpawn = skyBox2;
