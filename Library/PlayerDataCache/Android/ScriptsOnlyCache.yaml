@@ -1330,7 +1330,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 0cc4376a0c6501ae63c500c21b3f137d
+      Hash: f989e07000c0be5ce962339d802f970d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObstacleSpawn1
@@ -1768,7 +1768,7 @@ ScriptsOnlyBuild:
     className: TMP_DigitValidator
   - hash:
       serializedVersion: 2
-      Hash: 830db6220bf9de23cc7bc91950f3e8a1
+      Hash: 8389d892400dff5e1012e5314a65bd40
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UpgradesOnClick
@@ -1834,7 +1834,7 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
-      Hash: d26800225d215daddf38410eb1e895f3
+      Hash: f314be2d7e0d5b4d63dae8cf4fbca746
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Score

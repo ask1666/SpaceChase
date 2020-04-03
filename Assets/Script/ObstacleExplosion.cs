@@ -69,7 +69,7 @@ public class ObstacleExplosion : MonoBehaviour {
         score.cash += Mathf.RoundToInt(score.score) / 10;
         score.earnedCash += Mathf.RoundToInt(score.score) / 10;
         UpgradesProperties UP = GameObject.Find("GameControl").GetComponent<UpgradesProperties>();
-        PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration, score.cash, UP.playerName, UP.movementSpeed);
+        PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration, score.cash, UP.playerName, UP.movementSpeed, Score.startAmmo);
         SaveSystem.SavePlayerData(playerData);
         SceneManager.LoadScene("DeathScreen");
     }

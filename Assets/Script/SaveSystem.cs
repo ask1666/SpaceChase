@@ -34,10 +34,11 @@ public static class SaveSystem {
             GameObject gameControl = GameObject.Find("GameControl");
             gameControl.GetComponent<Score>().highScore = data.highScore;
             gameControl.GetComponent<Score>().cash = data.cash;
+            Score.startAmmo = data.startAmmo;
             gameControl.GetComponent<UpgradesProperties>().jetpackDuration = data.jetpackDuration;
             gameControl.GetComponent<UpgradesProperties>().playerName = data.playerPrefab;
             gameControl.GetComponent<UpgradesProperties>().movementSpeed = data.movementSpeed;
-
+            
 
         } else {
             Debug.LogError("Save file not found in" + path);

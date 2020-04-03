@@ -18,7 +18,7 @@ public class Score : MonoBehaviour {
 
     private Button shootBtn;
 
-    public int startAmmo;
+    public static int startAmmo;
     public int ammoRefillAmount;
     public int ammo;
     public float score;
