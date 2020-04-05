@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 547165892}
   - component: {fileID: 547165894}
   - component: {fileID: 547165893}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4822,9 +4822,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7733736499541227801}
   - component: {fileID: 7733736499541227802}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: AmmoboxGraphic
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4907,7 +4907,7 @@ GameObject:
   - component: {fileID: 1237214841}
   - component: {fileID: 85990088}
   - component: {fileID: 3420960931902802701}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Ammobox
   m_TagString: Ammo
   m_Icon: {fileID: 0}

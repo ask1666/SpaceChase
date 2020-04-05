@@ -34,7 +34,12 @@ public static class SaveSystem {
             GameObject gameControl = GameObject.Find("GameControl");
             gameControl.GetComponent<Score>().highScore = data.highScore;
             gameControl.GetComponent<Score>().cash = data.cash;
-            Score.startAmmo = data.startAmmo;
+            if (data.startAmmo < 5) {
+                Score.startAmmo = 5;
+            } else {
+                Score.startAmmo = data.startAmmo;
+            }
+            
             gameControl.GetComponent<UpgradesProperties>().jetpackDuration = data.jetpackDuration;
             gameControl.GetComponent<UpgradesProperties>().playerName = data.playerPrefab;
             gameControl.GetComponent<UpgradesProperties>().movementSpeed = data.movementSpeed;

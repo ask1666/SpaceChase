@@ -26,7 +26,11 @@ public class PowerUpExplosion : MonoBehaviour {
                 Fuel();
             } else if (this.gameObject.tag.Equals("Ammo")) {
                 Ammo();
-            } 
+            } else if (this.gameObject.tag.Equals("Magnet")) {
+                Magnet(collision.gameObject);
+            } else if (this.gameObject.tag.Equals("Shield")) {
+                Shield(collision.gameObject);
+            }
         }
     }
 
@@ -56,6 +60,14 @@ public class PowerUpExplosion : MonoBehaviour {
     void Coin() {
         GameObject.Find("GameControl").GetComponent<Score>().earnedCash += 5;
         GameObject.Find("GameControl").GetComponent<Score>().cash += 5;
+    }
+
+    void Magnet(GameObject player) {
+        player.GetComponent<PlayerController>().magnetActive = true;
+    }
+
+    void Shield(GameObject player) {
+        player.GetComponent<PlayerController>().shieldActive = true;
     }
 
     

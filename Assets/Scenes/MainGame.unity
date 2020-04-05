@@ -795,6 +795,9 @@ MonoBehaviour:
   - {fileID: 8809135473831653650, guid: 612893e218db2fb489e77e29b4d11a9d, type: 3}
   - {fileID: 7733736501450900756, guid: aa3cee3b00afe9240bee7648db7e0c4b, type: 3}
   - {fileID: 3411400897515378558, guid: 7ceb0649d1c15814aaca8068b25533f8, type: 3}
+  - {fileID: 8329017607275729997, guid: 54e17706fd7edf54ead9e6f948bfbe9b, type: 3}
+  - {fileID: 1776392611544155845, guid: d2310a7c07f23ab4690afc7ac6051d68, type: 3}
+  RareChance: 0.3
   chances:
   - 0.25
   - 0.5

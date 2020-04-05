@@ -13,6 +13,9 @@ TagManager:
   - Garbage
   - Bullet
   - Enemy
+  - Magnet
+  - Shield
+  - Collectable
   layers:
   - Default
   - TransparentFX

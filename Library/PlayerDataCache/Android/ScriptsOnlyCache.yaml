@@ -77,8 +77,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -1720,7 +1722,7 @@ ScriptsOnlyBuild:
     className: MotionBlur
   - hash:
       serializedVersion: 2
-      Hash: 607475adc37f8ebac31adfdb10da0c05
+      Hash: 1cadcab232d13d9fc0ec8df2d2934b0b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PowerUpSpawner
@@ -2128,7 +2130,7 @@ ScriptsOnlyBuild:
     className: ShadowCaster2D
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 93756eb49b791c386af54c8ed95b6ba8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -2140,7 +2142,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerEnumHistory
   - hash:
       serializedVersion: 2
-      Hash: f69f7299d3795792d72eb86d6eceae76
+      Hash: 21c1c6d1eadf06c5c92a609a06ffe8a6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SkyBoxScroll

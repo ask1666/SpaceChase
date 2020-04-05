@@ -18,6 +18,12 @@ public class PlayerController : MonoBehaviour {
     private bool swipeRight;
     private bool swipeLeft;
 
+    public bool magnetActive, shieldActive;
+    public GameObject shield, magnet;
+    public float step;
+
+    private float magnetTimer, shieldTimer;
+    public float magnetTime, shieldTime;
 
     private float startMovePos;
 
@@ -32,6 +38,19 @@ public class PlayerController : MonoBehaviour {
             if (this.gameObject.transform.position.y <= -1.5f) {
                 this.gameObject.transform.Translate(Vector2.up * 0.001f);
             }
+        }
+
+        if (magnetActive) {
+            Magnet();
+        } else {
+            magnet.SetActive(false);
+        }
+
+        if (shieldActive) {
+            Shield();
+        } else if (!GetComponent<Collider2D>().enabled || !shield.activeSelf) {
+            GetComponent<Collider2D>().enabled = true;
+            shield.SetActive(false);
         }
 
        
@@ -101,6 +120,32 @@ public class PlayerController : MonoBehaviour {
             swipeLeft = false;
         } else
             transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(startMovePos - 1.5f, transform.position.y), Time.deltaTime * speed);
+    }
+
+    private void Magnet() {
+        magnet.SetActive(true);
+        magnetTimer += Time.deltaTime;
+        if (magnetTimer <= magnetTime) {
+            GameObject[] powerUps = GameObject.FindGameObjectsWithTag("Collectable"); //This is the child of the powerup ( need to get the parent before using).
+
+            for (int i = 0; i < powerUps.Length; i++) {
+                powerUps[i].transform.parent.gameObject.transform.position = Vector2.MoveTowards(powerUps[i].transform.parent.gameObject.transform.position, transform.position, step);
+            }
+        } else {
+            magnetActive = false;
+            magnetTimer = 0;
+        }
+    }
+
+    private void Shield() {
+        shieldTimer += Time.deltaTime;
+        if (shieldTimer <= shieldTime) {
+            shield.SetActive(true);
+            GetComponent<Collider2D>().enabled = false;
+        } else {
+            shieldActive = false;
+            shieldTimer = 0;
+        }
     }
 
 
