@@ -16,6 +16,8 @@ TagManager:
   - Magnet
   - Shield
   - Collectable
+  - Missile
+  - ShieldEffect
   layers:
   - Default
   - TransparentFX

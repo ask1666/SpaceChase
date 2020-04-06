@@ -60,7 +60,9 @@ public class ObstacleExplosion : MonoBehaviour {
             collision.gameObject.GetComponent<AudioSource>().Play();
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             Garbage();
-        }
+        } else if (collision.gameObject.tag.Equals("ShieldEffect")) {
+            explode = true;
+        } 
     }
 
     public static IEnumerator killPlayer() {

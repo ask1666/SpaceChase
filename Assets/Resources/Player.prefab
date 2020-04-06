@@ -40,9 +40,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8698611077510251883}
   - component: {fileID: 6822030223869772611}
+  - component: {fileID: 3465774253426463250}
   m_Layer: 0
   m_Name: ShieldStatus
-  m_TagString: Untagged
+  m_TagString: ShieldEffect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +112,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &3465774253426463250
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363405013838697148}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3.1000004
 --- !u!1 &2115791034196686181
 GameObject:
   m_ObjectHideFlags: 0
