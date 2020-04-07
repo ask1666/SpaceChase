@@ -108,7 +108,7 @@ public class UpgradesOnClick : MonoBehaviour {
         if (startAmmoMaxed) {
             startAmmoText.text = "MAX";
         } else {
-            startAmmoText.text = "$" + jetpackDurationCost;
+            startAmmoText.text = "$" + startAmmoCost;
         }
 
 
@@ -136,7 +136,7 @@ public class UpgradesOnClick : MonoBehaviour {
 
     public void onClickStartAmmo() {
         if (!startAmmoMaxed && score.cash >= startAmmoCost) {
-            PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration + jetpackDurationIncrease, score.cash - jetpackDurationCost, UP.playerName, UP.movementSpeed, Score.startAmmo + startAmmoIncrease);
+            PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration, score.cash - startAmmoCost, UP.playerName, UP.movementSpeed, Score.startAmmo + startAmmoIncrease);
             SaveSystem.SavePlayerData(playerData);
             SaveSystem.LoadPlayerData();
             Debug.Log("saved");
