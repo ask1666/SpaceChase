@@ -18,7 +18,11 @@ public class EnemyBullet : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag.Equals("Player")) {
+        if (collision.gameObject.tag.Equals("ShieldEffect")) {
+
+            Destroy(this.gameObject);
+
+        } else if (collision.gameObject.tag.Equals("Player")) {
             collision.gameObject.GetComponent<AudioSource>().Play();
             collision.gameObject.GetComponent<Animator>().applyRootMotion = false;
             collision.gameObject.GetComponent<Animator>().SetTrigger("NoFuel");

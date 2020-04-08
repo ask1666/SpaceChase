@@ -23,6 +23,7 @@ public static class SaveSystem {
 
     public static void LoadPlayerData() {
         string path = Application.persistentDataPath + "/player.txt";
+        UpgradesProperties UP = GameObject.Find("GameControl").GetComponent<UpgradesProperties>();
         if (File.Exists(path)) {
 
             BinaryFormatter formatter = new BinaryFormatter();
@@ -37,14 +38,17 @@ public static class SaveSystem {
             
             Score.startAmmo = data.startAmmo;
             
-            
-            gameControl.GetComponent<UpgradesProperties>().jetpackDuration = data.jetpackDuration;
-            gameControl.GetComponent<UpgradesProperties>().playerName = data.playerPrefab;
-            gameControl.GetComponent<UpgradesProperties>().movementSpeed = data.movementSpeed;
-            
+            UP.jetpackDuration = data.jetpackDuration;
+            UP.playerName = data.playerPrefab;
+            UP.movementSpeed = data.movementSpeed;
+            UP.magnetTime = data.magnetTime;
+            UP.shieldTime = data.shieldTime;
 
         } else {
-            Debug.LogError("Save file not found in" + path);
+            Debug.LogError("Save file not found in" + path + "\n setting start values.");
+            PlayerData playerData = new PlayerData(0, 30, 0, "Player2", 5f, 5, 30, 5);
+            SavePlayerData(playerData);
+            LoadPlayerData();
 
 
         }

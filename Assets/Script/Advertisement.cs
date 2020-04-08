@@ -8,21 +8,20 @@ using UnityEngine.SceneManagement;
 public class Advertisement : MonoBehaviour {
 
     private InterstitialAd interstitial;
-    public GameObject loadingScreen;
     public GameObject canvas;
     private bool adDisplayed;
 
-    // Start is called before the first frame update
-    void Start() {
-
-        adDisplayed = false;
-
+    private void Awake() {
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize(initStatus => { });
 
         RequestInterstitial();
+    }
 
-        
+    // Start is called before the first frame update
+    void Start() {
+
+        SceneManager.sceneLoaded += ChangedActiveScene;
 
     }
 
@@ -30,15 +29,28 @@ public class Advertisement : MonoBehaviour {
     void Update() {
 
         
-        if (this.interstitial.IsLoaded() && !adDisplayed) {
-            this.interstitial.Show();
-            adDisplayed = true;
-        } 
 
-        
     }
 
-    
+    private void ChangedActiveScene(Scene scene, LoadSceneMode mode) {
+        if (this.gameObject.GetComponent<Score>().previousScene.Equals("DeathScreen") && scene.name.Equals("MainMenu")) {
+            canvas = GameObject.Find("Canvas");
+            if (this.interstitial.IsLoaded() && !adDisplayed) {
+                this.interstitial.Show();
+                adDisplayed = true;
+            }
+        } else if (this.gameObject.GetComponent<Score>().previousScene.Equals("MainGame") && scene.name.Equals("MainMenu")) {
+            canvas = GameObject.Find("Canvas");
+            if (this.interstitial.IsLoaded() && !adDisplayed) {
+                this.interstitial.Show();
+                adDisplayed = true;
+            }
+        }
+
+        if (scene.name.Equals("MainGame")) {
+            RequestInterstitial();
+        }
+    }
 
     private void RequestInterstitial() {
         #if UNITY_ANDROID
@@ -68,32 +80,32 @@ public class Advertisement : MonoBehaviour {
         AdRequest request = new AdRequest.Builder().AddTestDevice("L2N0219A14006501").Build();
         // Load the interstitial with the request.
         this.interstitial.LoadAd(request);
-        loadingScreen.SetActive(true);
-        canvas.SetActive(false);
+        
     }
 
-    public void HandleOnAdLeavingApplication(object sender, EventArgs e) {
+    public void HandleOnAdLeavingApplication(object sender, EventArgs e) {   //When leaving application.
         //interstitial.Destroy();
         print("Ad leaving application");
     }
 
-    public void HandleOnAdClosed(object sender, EventArgs e) {
+    public void HandleOnAdClosed(object sender, EventArgs e) {  //when ad is closed by pressing x.
         canvas.SetActive(true);
         interstitial.Destroy();
+        adDisplayed = false;
         print("Ad closed");
         
     }
 
-    public void HandleOnAdOpened(object sender, EventArgs e) {
-        loadingScreen.SetActive(false);
+    public void HandleOnAdOpened(object sender, EventArgs e) {   //When ad is displayed.
         print("Ad opened");
+        canvas.SetActive(false);
     }
 
-    public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs e) {
+    public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs e) {  //When ad cannot load for some reason.
         print("Ad failed to load: " +  e.Message);
     }
 
-    public void HandleOnAdLoaded(object sender, EventArgs e) {
+    public void HandleOnAdLoaded(object sender, EventArgs e) {  //When ad is loaded.
         print("Ad loaded");
     }
 }

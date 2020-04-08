@@ -13,6 +13,7 @@ public class UpgradesProperties : MonoBehaviour {
     public string playerName;
     public GameObject[] playerModels;
     public GameObject selectedPlayer;
+    public float magnetTime, shieldTime;
 
     // Start is called before the first frame update
     void Start() {
@@ -36,6 +37,8 @@ public class UpgradesProperties : MonoBehaviour {
         if (current.name.Equals("Game") || current.name.Equals("Game2") || current.name.Equals("Game3") || current.name.Equals("MainGame")) {
             JetPackBar.maxJetTime = jetpackDuration;
             PlayerController.speed = movementSpeed;
+            PlayerController.magnetTime = magnetTime;
+            PlayerController.shieldTime = shieldTime;
         }
     }
 

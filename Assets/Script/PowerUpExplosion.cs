@@ -18,7 +18,7 @@ public class PowerUpExplosion : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag.Equals("Player")) {
+        if (collision.gameObject.tag.Equals("Player") || collision.gameObject.tag.Equals("ShieldEffect")) {
             StartCoroutine(doExplosion());
             if (this.gameObject.tag.Equals("Coin")) {
                 Coin();

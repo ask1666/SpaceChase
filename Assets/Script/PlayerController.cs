@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
     public float step;
 
     private float magnetTimer, shieldTimer;
-    public float magnetTime, shieldTime;
+    public static float magnetTime, shieldTime;
 
     private float startMovePos;
 
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour {
 
         if (shieldActive) {
             Shield();
-        } else if (!GetComponent<Collider2D>().enabled || !shield.activeSelf) {
+        } else if (!GetComponent<Collider2D>().enabled || shield.activeSelf) {
             GetComponent<Collider2D>().enabled = true;
             shield.SetActive(false);
         }
