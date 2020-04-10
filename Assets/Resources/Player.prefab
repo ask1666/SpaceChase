@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 8698611077510251883}
   - component: {fileID: 6822030223869772611}
   - component: {fileID: 3465774253426463250}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ShieldStatus
   m_TagString: ShieldEffect
   m_Icon: {fileID: 0}
@@ -839,12 +839,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!114 &2640702378216532554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,8 +862,6 @@ MonoBehaviour:
   shield: {fileID: 1363405013838697148}
   magnet: {fileID: 4565421279137063791}
   step: 0.1
-  magnetTime: 10
-  shieldTime: 5
 --- !u!212 &3998790202979841002
 SpriteRenderer:
   m_ObjectHideFlags: 0

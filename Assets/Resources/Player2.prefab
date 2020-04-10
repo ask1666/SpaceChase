@@ -15326,12 +15326,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!114 &7147066480497049942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15349,8 +15349,6 @@ MonoBehaviour:
   shield: {fileID: 6173424055020124423}
   magnet: {fileID: 1870397233428075894}
   step: 0.1
-  magnetTime: 10
-  shieldTime: 5
 --- !u!212 &7147066480497049943
 SpriteRenderer:
   m_ObjectHideFlags: 0

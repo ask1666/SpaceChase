@@ -557,12 +557,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!114 &5891819978611974162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,8 +580,6 @@ MonoBehaviour:
   shield: {fileID: 7330818381768186000}
   magnet: {fileID: 7612482296730580210}
   step: 0.1
-  magnetTime: 10
-  shieldTime: 5
 --- !u!70 &5891819978611974161
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

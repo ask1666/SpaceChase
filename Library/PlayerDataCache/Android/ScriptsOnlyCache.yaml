@@ -1574,7 +1574,7 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
-      Hash: bcd2fff881007579f66e17c7c8ad1510
+      Hash: 2b53c7e26508edab113247a288c3fcc5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UpgradesProperties
@@ -1790,7 +1790,7 @@ ScriptsOnlyBuild:
     className: TMP_DigitValidator
   - hash:
       serializedVersion: 2
-      Hash: 8389d892400dff5e1012e5314a65bd40
+      Hash: b7b6987eb349a44da97d2f3f4a5ee734
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UpgradesOnClick
@@ -2156,7 +2156,7 @@ ScriptsOnlyBuild:
     className: ShadowCaster2D
   - hash:
       serializedVersion: 2
-      Hash: 93756eb49b791c386af54c8ed95b6ba8
+      Hash: 622f82687ffb950d04077043b9a75ea0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
