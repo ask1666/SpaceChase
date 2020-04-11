@@ -441,8 +441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c74b056fb0c10b46886d9f5eba11833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 50429830}
   canvas: {fileID: 3152058}
+  AC: {fileID: 322603385}
 --- !u!114 &166616793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,6 +465,8 @@ MonoBehaviour:
   - {fileID: 6357729284211210153, guid: b59e121d900224b4491d92854d550e81, type: 3}
   selectedPlayer: {fileID: 7147066480497049939, guid: 73ca825532fcafa48bb66081607b9853,
     type: 3}
+  magnetTime: 0
+  shieldTime: 0
 --- !u!1001 &322603383
 PrefabInstance:
   m_ObjectHideFlags: 0

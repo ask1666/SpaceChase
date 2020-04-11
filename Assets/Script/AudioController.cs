@@ -35,4 +35,12 @@ public class AudioController : MonoBehaviour {
             
         } 
     }
+
+    public void PauseAudio() {
+        audioSource.Pause();
+    }
+
+    public void ResumeAudio() {
+        audioSource.UnPause();
+    }
 }

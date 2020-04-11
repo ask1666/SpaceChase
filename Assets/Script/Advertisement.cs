@@ -10,6 +10,7 @@ public class Advertisement : MonoBehaviour {
     private InterstitialAd interstitial;
     public GameObject canvas;
     private bool adDisplayed;
+    public AudioController AC;
 
     private void Awake() {
         // Initialize the Google Mobile Ads SDK.
@@ -92,6 +93,7 @@ public class Advertisement : MonoBehaviour {
         canvas.SetActive(true);
         interstitial.Destroy();
         adDisplayed = false;
+        AC.ResumeAudio();
         print("Ad closed");
         
     }
@@ -99,6 +101,7 @@ public class Advertisement : MonoBehaviour {
     public void HandleOnAdOpened(object sender, EventArgs e) {   //When ad is displayed.
         print("Ad opened");
         canvas.SetActive(false);
+        AC.PauseAudio();
     }
 
     public void HandleOnAdFailedToLoad(object sender, AdFailedToLoadEventArgs e) {  //When ad cannot load for some reason.
