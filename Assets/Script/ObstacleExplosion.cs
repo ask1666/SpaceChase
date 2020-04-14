@@ -13,12 +13,14 @@ public class ObstacleExplosion : MonoBehaviour {
     public GameObject graphic;
     public AudioSource sound;
     private float timeSinceExploded = 0.4f;
+    public static bool pause;
     public static float speed;
 
     // Start is called before the first frame update
     void Start() {
 
         explode = false;
+        pause = false;
 
     }
 
@@ -29,7 +31,7 @@ public class ObstacleExplosion : MonoBehaviour {
             timeSinceExploded = 0;
             StartCoroutine(doExplosion());
         }
-
+        if (!pause)
         GetComponent<Rigidbody2D>().AddForce(Vector2.down * speed, ForceMode2D.Impulse);
 
     }

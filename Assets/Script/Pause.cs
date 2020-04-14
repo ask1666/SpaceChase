@@ -36,6 +36,11 @@ public class Pause : MonoBehaviour
     }
 
     private void DoPause() {
+        ObstacleExplosion.pause = true;
+        Shoot.pause = true;
+        Gun.pause = true;
+        PlayerController.pause = true;
+        SkyBoxScroll.pause = true;
         Time.timeScale = 0;
         continueButton.SetActive(true);
         mainMenuButton.SetActive(true);
@@ -44,6 +49,11 @@ public class Pause : MonoBehaviour
     }
 
     public void onClick() {
+        ObstacleExplosion.pause = false;
+        Shoot.pause = false;
+        Gun.pause = false;
+        PlayerController.pause = false;
+        SkyBoxScroll.pause = false;
         continueButton.SetActive(false);
         mainMenuButton.SetActive(false);
         Time.timeScale = 1;

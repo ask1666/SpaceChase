@@ -21,14 +21,14 @@ public class Shoot : MonoBehaviour {
     private Score score;
 
     private Button shootBtn;
-
+    public static bool pause;
     private Vector3 fp;   //First touch position
     private Vector3 lp;   //Last touch position
     private float dragDistance;  //minimum distance for a swipe to be registered
 
     // Start is called before the first frame update
     void Start() {
-
+        pause = false;
         shootBtn = GameObject.Find("ShootBtn").GetComponent<Button>();
         score = GameObject.Find("GameControl").GetComponent<Score>();
         shootBtn.onClick.AddListener(delegate () { OnClick(); });
@@ -104,7 +104,7 @@ public class Shoot : MonoBehaviour {
             spawnedBullet.transform.localScale = new Vector3(1f, 1f, 1f);
 
             sound.Play();
-            Destroy(spawnedBullet, 0.9f);
+            Destroy(spawnedBullet, 1.2f);
             yield return new WaitForSeconds(soundPlayTime);
             sound.Stop();
 
@@ -130,7 +130,7 @@ public class Shoot : MonoBehaviour {
     }
 
     public void OnClick() {
-        if (gunCooldownTimer > gunCooldown && score.ammo > 0) {
+        if (gunCooldownTimer > gunCooldown && score.ammo > 0 && !pause) {
             StartCoroutine(doShoot());
             shoot = false;
             gunCooldownTimer = 0;

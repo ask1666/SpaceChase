@@ -19,6 +19,7 @@ public class Gun : MonoBehaviour {
     public float gunCooldown = 1f;
     private float gunCooldownTimer = 1f;
 
+    public static bool pause;
     private Score score;
 
     private Vector3 fp;   //First touch position
@@ -27,6 +28,7 @@ public class Gun : MonoBehaviour {
 
 
     void Start() {
+        pause = false;
         shootBtn = GameObject.Find("ShootBtn").GetComponent<Button>();
         lr = gameObject.GetComponent<LineRenderer>();
         score = GameObject.Find("GameControl").GetComponent<Score>();
@@ -136,7 +138,7 @@ public class Gun : MonoBehaviour {
      * When you shoot, the doBeam() is called, and the cooldownTimer is reset.
      */
     public void OnClick() {
-        if (gunCooldownTimer > gunCooldown && score.ammo > 0) {
+        if (gunCooldownTimer > gunCooldown && score.ammo > 0 && !pause) {
             StartCoroutine(doBeam());
             shoot = false;
             gunCooldownTimer = 0;

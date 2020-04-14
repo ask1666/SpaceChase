@@ -24,11 +24,11 @@ public class PlayerController : MonoBehaviour {
 
     private float magnetTimer, shieldTimer;
     public static float magnetTime, shieldTime;
-
+    public static bool pause;
     private float startMovePos;
 
     void Start() {
-        
+        pause = false;
         dragDistance = Screen.height * 5 / 100; //dragDistance is 7% height of the screen
         
     }
@@ -109,14 +109,14 @@ public class PlayerController : MonoBehaviour {
 
 
     private void SwipeRight() {
-        if (transform.position.x >= 1f || transform.position.x >= startMovePos + 1.5f) {
+        if (transform.position.x >= 1f || transform.position.x >= startMovePos + 1.5f || pause) {
             swipeRight = false;
         } else
             transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(startMovePos + 1.5f, transform.position.y), Time.deltaTime * speed);
     }
 
     private void SwipeLeft() {
-        if (transform.position.x <= -2f || transform.position.x <= startMovePos - 1.5f) {
+        if (transform.position.x <= -2f || transform.position.x <= startMovePos - 1.5f || pause) {
             swipeLeft = false;
         } else
             transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), new Vector2(startMovePos - 1.5f, transform.position.y), Time.deltaTime * speed);

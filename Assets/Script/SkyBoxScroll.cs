@@ -15,12 +15,14 @@ public class SkyBoxScroll : MonoBehaviour {
 
     public float maxSpeed, minSpeed, tt;
     private float t;
-
+    public static bool pause;
     public float startPos, endPos;
     Score score;
 
     // Start is called before the first frame update
     void Start() {
+
+        pause = false;
         skyBoxToSpawn = skyBox1;
         newSkyBox = Instantiate(skyBoxToSpawn, new Vector3(0, -endPos, 1f), Quaternion.identity);
         currentSkyBox = null;
@@ -48,10 +50,12 @@ public class SkyBoxScroll : MonoBehaviour {
 
         }
 
-        newSkyBox.transform.Translate(Vector2.down * speed);
+        if (!pause)
+            newSkyBox.transform.Translate(Vector2.down * speed);
 
         try {
-            currentSkyBox.transform.Translate(Vector2.down * speed);
+            if (!pause)
+                currentSkyBox.transform.Translate(Vector2.down * speed);
 
             if (currentSkyBox.transform.position.y <= -startPos) {
                 Destroy(currentSkyBox);
