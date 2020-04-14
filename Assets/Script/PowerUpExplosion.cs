@@ -64,10 +64,12 @@ public class PowerUpExplosion : MonoBehaviour {
 
     void Magnet(GameObject player) {
         player.GetComponent<PlayerController>().magnetActive = true;
+        GameObject.Find("MagnetPanel").GetComponent<MagnetBarPanel>().magnetRefill();
     }
 
     void Shield(GameObject player) {
         player.GetComponent<PlayerController>().shieldActive = true;
+        GameObject.Find("ShieldPanel").GetComponent<ShieldPanel>().refillShield();
     }
 
     

@@ -42,14 +42,14 @@ public class PlayerController : MonoBehaviour {
 
         if (magnetActive) {
             Magnet();
-            GameObject.Find("MagnetPanel").GetComponent<MagnetBarPanel>().magnetRefill();
+            
         } else {
             magnet.SetActive(false);
         }
 
         if (shieldActive) {
             Shield();
-            GameObject.Find("ShieldPanel").GetComponent<ShieldPanel>().refillShield();
+            
         } else if (!GetComponent<Collider2D>().enabled || shield.activeSelf) {
             GetComponent<Collider2D>().enabled = true;
             shield.SetActive(false);
@@ -127,13 +127,15 @@ public class PlayerController : MonoBehaviour {
     private void Magnet() {
         magnetTimer += Time.deltaTime;
         if (magnetTimer <= magnetTime) {
+            //Debug.Log("magnettime: " + magnetTimer);
+            MagnetBarPanel.magnetActive = true;
             magnet.SetActive(true);
             GameObject[] powerUps = GameObject.FindGameObjectsWithTag("Collectable"); //This is the child of the powerup ( need to get the parent before using).
 
             for (int i = 0; i < powerUps.Length; i++) {
                 powerUps[i].transform.parent.gameObject.transform.position = Vector2.MoveTowards(powerUps[i].transform.parent.gameObject.transform.position, transform.position, step);
             }
-            MagnetBarPanel.magnetActive = true;
+            
         } else {
             magnetActive = false;
             magnetTimer = 0;
@@ -144,9 +146,11 @@ public class PlayerController : MonoBehaviour {
     private void Shield() {
         shieldTimer += Time.deltaTime;
         if (shieldTimer <= shieldTime) {
+            //Debug.Log("shieldtime: " + shieldTimer);
+            ShieldPanel.shieldActive = true;
             shield.SetActive(true);
             GetComponent<Collider2D>().enabled = false;
-            ShieldPanel.shieldActive = true;
+            
         } else {
             shieldActive = false;
             shieldTimer = 0;

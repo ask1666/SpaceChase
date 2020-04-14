@@ -23,6 +23,7 @@ public class Score : MonoBehaviour {
     public int ammo;
     public float score;
     private float timer;
+    public static bool pause;
     private float multiplierTimer;
     public float multiplierSpeed; //less for more score
     public int highScore;
@@ -81,13 +82,15 @@ public class Score : MonoBehaviour {
         SceneManager.sceneLoaded += OnSceneLoaded;
 
         if (SceneManager.GetActiveScene().name.Equals("Game") || SceneManager.GetActiveScene().name.Equals("Game2") || SceneManager.GetActiveScene().name.Equals("Game3") || SceneManager.GetActiveScene().name.Equals("MainGame")) {
-            ammoText.text = "" + ammo;
-            scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
-            scoreText.text = "Score:\n" + Mathf.RoundToInt(score);
-            timer = Time.timeSinceLevelLoad;
-            multiplierTimer = Mathf.Lerp(0f, 4f, timer / multiplierSpeed);
-            if (score > highScore) {
-                highScore = Mathf.RoundToInt(score);
+            if (!pause) {
+                ammoText.text = "" + ammo;
+                scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
+                scoreText.text = "Score:\n" + Mathf.RoundToInt(score);
+                timer = Time.timeSinceLevelLoad;
+                multiplierTimer = Mathf.Lerp(0f, 4f, timer / multiplierSpeed);
+                if (score > highScore) {
+                    highScore = Mathf.RoundToInt(score);
+                }
             }
         } else {
             if (Input.GetKeyDown(KeyCode.Escape)) {
