@@ -137,6 +137,7 @@
     <Compile Include="Assets\Script\Gun.cs" />
     <Compile Include="Assets\Script\IntroScript.cs" />
     <Compile Include="Assets\Script\JetPackBar.cs" />
+    <Compile Include="Assets\Script\MagnetBarPanel.cs" />
     <Compile Include="Assets\Script\MineExplosion.cs" />
     <Compile Include="Assets\Script\ObstacleExplosion.cs" />
     <Compile Include="Assets\Script\ObstacleSpawn.cs" />
@@ -151,6 +152,7 @@
     <Compile Include="Assets\Script\SaveSystem.cs" />
     <Compile Include="Assets\Script\SceneManage.cs" />
     <Compile Include="Assets\Script\Score.cs" />
+    <Compile Include="Assets\Script\ShieldPanel.cs" />
     <Compile Include="Assets\Script\Shoot.cs" />
     <Compile Include="Assets\Script\SkyBoxScroll.cs" />
     <Compile Include="Assets\Script\UpgradesOnClick.cs" />
