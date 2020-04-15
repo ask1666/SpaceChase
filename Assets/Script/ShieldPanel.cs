@@ -28,6 +28,8 @@ public class ShieldPanel : MonoBehaviour {
 
             float percent = timer / maxTime;
             shieldPanel.fillAmount = Mathf.Lerp(1, 0, percent);
+        } else {
+            shieldPanel.fillAmount = 0;
         }
     }
 

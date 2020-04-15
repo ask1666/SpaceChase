@@ -20,7 +20,7 @@ public class Score : MonoBehaviour {
 
     public static int startAmmo = 5;
     public int ammoRefillAmount;
-    public int ammo;
+    public int ammo, maxAmmo;
     public float score;
     private float timer;
     public static bool pause;
@@ -72,7 +72,13 @@ public class Score : MonoBehaviour {
     }
 
     public void RefillAmmo() {
-        ammo += ammoRefillAmount;
+
+        if ((ammo + ammoRefillAmount) <= maxAmmo) {
+            ammo += ammoRefillAmount;
+        } else {
+            ammo = maxAmmo;
+        }
+        
     }
 
 

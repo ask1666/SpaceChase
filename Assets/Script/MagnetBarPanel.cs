@@ -30,6 +30,8 @@ public class MagnetBarPanel : MonoBehaviour {
             float percent = timer / maxTime;
             magnetPanel.fillAmount = Mathf.Lerp(1, 0, percent);
 
+        } else {
+            magnetPanel.fillAmount = 0;
         }
     }
 
