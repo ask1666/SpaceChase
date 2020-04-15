@@ -55,8 +55,8 @@ public class Advertisement : MonoBehaviour {
 
     private void RequestInterstitial() {
         #if UNITY_ANDROID
-            string adUnitId = "ca-app-pub-4801663425256116/8643562888";
-            //string adUnitId = "ca-app-pub-3940256099942544/1033173712";   // test
+            //string adUnitId = "ca-app-pub-4801663425256116/8643562888";
+            string adUnitId = "ca-app-pub-3940256099942544/1033173712";   // test
         #elif UNITY_IPHONE
             string adUnitId = "ca-app-pub-3940256099942544/4411468910";
         #else
@@ -78,7 +78,7 @@ public class Advertisement : MonoBehaviour {
         this.interstitial.OnAdLeavingApplication += HandleOnAdLeavingApplication;
 
         // Create an empty ad request.
-        AdRequest request = new AdRequest.Builder().Build();
+        AdRequest request = new AdRequest.Builder().AddTestDevice("L2N0219A14006501").Build();
         // Load the interstitial with the request.
         this.interstitial.LoadAd(request);
         
