@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - EnemyController
     - EnemyShoot
     - ExplosionOnTrigger
+    - GoogleMobileAds.Common.MobileAdsEventExecutor
     - Gun
     - IntroScript
     - JetPackBar

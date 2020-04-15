@@ -34,6 +34,16 @@ public class SceneManage : MonoBehaviour {
         
     }
 
+    public void pauseMenu(string sceneName) {
+        ObstacleExplosion.pause = false;
+        Shoot.pause = false;
+        Gun.pause = false;
+        PlayerController.pause = false;
+        SkyBoxScroll.pause = false;
+        Score.pause = false;
+        SceneManager.LoadScene(sceneName);
+    }
+
     IEnumerator LoadYourAsyncScene() {
         // The Application loads the Scene in the background as the current Scene runs.
         // This is particularly good for creating loading screens.

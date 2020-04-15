@@ -26,7 +26,6 @@ public class MagnetBarPanel : MonoBehaviour {
     private void magnet() {
         if (magnetActive) {
             timer += Time.deltaTime;
-            Debug.Log(timer);
 
             float percent = timer / maxTime;
             magnetPanel.fillAmount = Mathf.Lerp(1, 0, percent);

@@ -850,7 +850,7 @@ MonoBehaviour:
   dontSpawn: 1
   maxSpeed: 0.05
   minSpeed: 0.018
-  tt: 0.01
+  tt: 0.015
 --- !u!1 &532301420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,12 +1090,12 @@ PrefabInstance:
     - target: {fileID: 3881087803549984436, guid: ec536a7718376554185e4a856d5ae230,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 42.892944
+      value: 42.893066
       objectReference: {fileID: 0}
     - target: {fileID: 3881087803549984436, guid: ec536a7718376554185e4a856d5ae230,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 182.32
+      value: 182.31995
       objectReference: {fileID: 0}
     - target: {fileID: 3881087803549984436, guid: ec536a7718376554185e4a856d5ae230,
         type: 3}
@@ -7137,7 +7137,7 @@ PrefabInstance:
     - target: {fileID: 7926430717457526693, guid: 02d135394dfda4b4dbfa38be8c06084f,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeScene
+      value: pauseMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7926430717457526693, guid: 02d135394dfda4b4dbfa38be8c06084f,
         type: 3}
