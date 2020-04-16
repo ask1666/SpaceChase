@@ -63,6 +63,7 @@ public class UpgradesOnClick : MonoBehaviour {
             SaveSystem.SavePlayerData(playerData);
             SaveSystem.LoadPlayerData();
             Debug.Log("saved");
+            GameObject.Find("GameControl").GetComponent<Score>().setText();
             
         } 
     }
@@ -73,7 +74,8 @@ public class UpgradesOnClick : MonoBehaviour {
             SaveSystem.SavePlayerData(playerData);
             SaveSystem.LoadPlayerData();
             Debug.Log("saved");
-            
+            GameObject.Find("GameControl").GetComponent<Score>().setText();
+
         }
     }
 
@@ -83,6 +85,7 @@ public class UpgradesOnClick : MonoBehaviour {
             SaveSystem.SavePlayerData(playerData);
             SaveSystem.LoadPlayerData();
             Debug.Log("saved");
+            GameObject.Find("GameControl").GetComponent<Score>().setText();
 
         }
     }
@@ -93,6 +96,7 @@ public class UpgradesOnClick : MonoBehaviour {
             SaveSystem.SavePlayerData(playerData);
             SaveSystem.LoadPlayerData();
             Debug.Log("saved");
+            GameObject.Find("GameControl").GetComponent<Score>().setText();
 
         }
     }
@@ -103,6 +107,7 @@ public class UpgradesOnClick : MonoBehaviour {
             SaveSystem.SavePlayerData(playerData);
             SaveSystem.LoadPlayerData();
             Debug.Log("saved");
+            GameObject.Find("GameControl").GetComponent<Score>().setText();
 
         }
     }

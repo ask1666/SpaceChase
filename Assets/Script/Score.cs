@@ -44,6 +44,7 @@ public class Score : MonoBehaviour {
 
     private void Start() {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        setText();
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode) {

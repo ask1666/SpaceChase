@@ -99,7 +99,6 @@ MonoBehaviour:
   explosion: {fileID: 7524309111849181181}
   graphic: {fileID: 7524309113010401023}
   sound: {fileID: 1453342063}
-  speed: 0.018
 --- !u!82 &1453342063
 AudioSource:
   m_ObjectHideFlags: 0

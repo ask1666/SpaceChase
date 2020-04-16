@@ -4978,7 +4978,7 @@ MonoBehaviour:
   bulletSpawnPos: {fileID: 1524652931452430698}
   maxT: 4
   minT: 0.5
-  t: 0.03
+  tt: 0
 --- !u!114 &18361164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5162,6 +5162,14 @@ PrefabInstance:
     - target: {fileID: 426390, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 21215670, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21240998, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
