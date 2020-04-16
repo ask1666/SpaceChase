@@ -83,7 +83,7 @@ public class Gun : MonoBehaviour {
             shootBtn.GetComponent<Button>().interactable = true;
         }
 
-        if (Input.touchCount == 1) // user is touching the screen with a single touch
+        if (Input.touchCount == 1 && !pause) // user is touching the screen with a single touch
         {
             Touch touch = Input.GetTouch(0); // get the touch
             if (touch.phase == TouchPhase.Began) //check for the first touch
@@ -112,7 +112,7 @@ public class Gun : MonoBehaviour {
                         }
                     }
                 } else {   //It's a tap as the drag distance is less than 20% of the screen height
-                    if (shootBtn.GetComponent<Button>().interactable == true && score.ammo >= 0) {
+                    if (shootBtn.GetComponent<Button>().interactable == true && score.ammo >= 0 && !pause) {
                         OnClick();
                     }
                 }
@@ -138,7 +138,7 @@ public class Gun : MonoBehaviour {
      * When you shoot, the doBeam() is called, and the cooldownTimer is reset.
      */
     public void OnClick() {
-        if (gunCooldownTimer > gunCooldown && score.ammo > 0 && !pause) {
+        if (gunCooldownTimer > gunCooldown && score.ammo > 0) {
             StartCoroutine(doBeam());
             shoot = false;
             gunCooldownTimer = 0;

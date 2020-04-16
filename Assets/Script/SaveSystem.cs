@@ -45,7 +45,7 @@ public static class SaveSystem {
             UP.shieldTime = data.shieldTime;
 
         } else {
-            Debug.LogError("Save file not found in" + path + "\n setting start values.");
+            Debug.Log("Save file not found in" + path + "\n setting start values.");
             PlayerData playerData = new PlayerData(0, 30, 0, "Player2", 5f, 5, 30, 5);
             SavePlayerData(playerData);
             LoadPlayerData();

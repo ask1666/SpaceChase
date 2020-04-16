@@ -40,16 +40,20 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if (magnetActive) {
+        if (magnetActive && !pause) {
             Magnet();
-            
+
+        } else if (pause) {
+        
         } else {
             magnet.SetActive(false);
         }
 
-        if (shieldActive) {
+        if (shieldActive && !pause) {
             Shield();
-            
+
+        } else if (pause) {
+
         } else if (!GetComponent<Collider2D>().enabled || shield.activeSelf) {
             GetComponent<Collider2D>().enabled = true;
             shield.SetActive(false);

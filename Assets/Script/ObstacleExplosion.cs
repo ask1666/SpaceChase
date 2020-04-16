@@ -75,7 +75,9 @@ public class ObstacleExplosion : MonoBehaviour {
         UpgradesProperties UP = GameObject.Find("GameControl").GetComponent<UpgradesProperties>();
         PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration, score.cash, UP.playerName, UP.movementSpeed, Score.startAmmo, UP.magnetTime, UP.shieldTime);
         SaveSystem.SavePlayerData(playerData);
+        Debug.Log("did it");
         SceneManager.LoadScene("DeathScreen");
+        
     }
 
     void Garbage() {

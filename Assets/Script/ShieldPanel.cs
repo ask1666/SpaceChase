@@ -15,6 +15,7 @@ public class ShieldPanel : MonoBehaviour {
     void Start() {
         shieldPanel.fillAmount = 0;
         maxTime = PlayerController.shieldTime;
+        shieldActive = false;
     }
 
     // Update is called once per frame
@@ -29,6 +30,7 @@ public class ShieldPanel : MonoBehaviour {
             float percent = timer / maxTime;
             shieldPanel.fillAmount = Mathf.Lerp(1, 0, percent);
         } else {
+            timer = 0;
             shieldPanel.fillAmount = 0;
         }
     }

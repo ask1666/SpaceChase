@@ -14,8 +14,8 @@ public class MagnetBarPanel : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         magnetPanel.fillAmount = 0;
-
         maxTime = PlayerController.magnetTime;
+        magnetActive = false;
     }
 
     // Update is called once per frame
@@ -31,6 +31,7 @@ public class MagnetBarPanel : MonoBehaviour {
             magnetPanel.fillAmount = Mathf.Lerp(1, 0, percent);
 
         } else {
+            timer = 0;
             magnetPanel.fillAmount = 0;
         }
     }

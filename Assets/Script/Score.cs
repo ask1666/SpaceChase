@@ -21,7 +21,8 @@ public class Score : MonoBehaviour {
     public static int startAmmo = 5;
     public int ammoRefillAmount;
     public int ammo, maxAmmo;
-    public float score;
+    public int score;
+    public int previousScore;
     private float timer;
     public static bool pause;
     private float multiplierTimer;
@@ -42,31 +43,40 @@ public class Score : MonoBehaviour {
     }
 
     private void Start() {
-        
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         if (scene.name.Equals("MainMenu")) {
+            setText();
             Time.timeScale = 1;
             GameObject[] gameControl = GameObject.FindGameObjectsWithTag("GameControl");
 
             for (int i = 0; i < gameControl.Length; i++) {
                 if (gameControl[i] != this.gameObject) {
                     Destroy(gameControl[i]);
-                    
+
                 }
             }
-        } else if (scene.name.Equals("Game") || scene.name.Equals("Game2") || scene.name.Equals("Game3") || scene.name.Equals("MainGame")) {
+        } else if (scene.name.Equals("MainGame")) {
+            setText();
             previousScene = scene.name;
             earnedCash = 0;
             ammoText = GameObject.Find("AmmoNrText").GetComponent<TextMeshProUGUI>();
             ammo = startAmmo;
         } else if (scene.name.Equals("DeathScreen")) {
+            setText();
             scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
             scoreText.text = "Score:\n" + Mathf.RoundToInt(score);
             EarnedCashNrText = GameObject.Find("EarnedCashNrText").GetComponent<TextMeshProUGUI>();
             EarnedCashNrText.text = "" + earnedCash;
-            timer = Time.deltaTime;
+            //timer = Time.deltaTime;
+        } else if (scene.name.Equals("Controls")) {
+            setText();
+        } else if (scene.name.Equals("Upgrades")) {
+            setText();
+        } else if (scene.name.Equals("PlayerSelect")) {
+            setText();
         }
 
     }
@@ -78,48 +88,46 @@ public class Score : MonoBehaviour {
         } else {
             ammo = maxAmmo;
         }
-        
+
+    }
+
+    public void setText() {
+        highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
+        cashText = GameObject.Find("CashText").GetComponent<TextMeshProUGUI>();
+        highScoreText.text = "HighScore:\n" + highScore;
+        cashText.text = "Cash:\n" + cash;
     }
 
 
     void Update() {
-        
 
-        SceneManager.sceneLoaded += OnSceneLoaded;
 
-        if (SceneManager.GetActiveScene().name.Equals("Game") || SceneManager.GetActiveScene().name.Equals("Game2") || SceneManager.GetActiveScene().name.Equals("Game3") || SceneManager.GetActiveScene().name.Equals("MainGame")) {
+
+        if (SceneManager.GetActiveScene().name.Equals("MainGame") && !pause) {
             
-            ammoText.text = "" + ammo;
-            scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
-            scoreText.text = "Score:\n" + Mathf.RoundToInt(score);
-            timer = Time.timeSinceLevelLoad;
-            if (!pause) {
-                multiplierTimer = Mathf.Lerp(0f, 4f, timer / multiplierSpeed);
+            multiplierTimer = Mathf.Lerp(0f, 4f, Time.timeSinceLevelLoad / multiplierSpeed);
+            score = Mathf.RoundToInt(Time.timeSinceLevelLoad * multiplierTimer);
+            if (previousScore != score || previousScore == 0) {
+                previousScore = score;
+                ammoText.text = "" + ammo;
+                scoreText = GameObject.Find("ScoreText").GetComponent<TextMeshProUGUI>();
+                scoreText.text = "Score:\n" + Mathf.RoundToInt(score);
+                highScoreText.text = "HighScore:\n" + highScore;
+                cashText.text = "Cash:\n" + cash;
+                if (score > highScore) {
+                    highScore = Mathf.RoundToInt(score);
+                }
             }
-            if (score > highScore) {
-                highScore = Mathf.RoundToInt(score);
-            }
-            
+
         } else {
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 SceneManager.LoadScene("MainMenu");
             }
         }
 
-        try {
-            highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
-            cashText = GameObject.Find("CashText").GetComponent<TextMeshProUGUI>();
-        } catch (System.NullReferenceException) {
+        if (Time.frameCount % 30 == 0) {
+            System.GC.Collect();
         }
-
-        
-
-        score = timer * multiplierTimer;
-
-        highScoreText.text = "HighScore:\n" + highScore;
-        cashText.text = "Cash:\n" + cash;
-
-
 
 
     }

@@ -63,13 +63,19 @@ public class PowerUpExplosion : MonoBehaviour {
     }
 
     void Magnet(GameObject player) {
-        player.GetComponent<PlayerController>().magnetActive = true;
-        GameObject.Find("MagnetPanel").GetComponent<MagnetBarPanel>().magnetRefill();
+        if (player.GetComponent<PlayerController>().magnetActive) {
+            GameObject.Find("MagnetPanel").GetComponent<MagnetBarPanel>().magnetRefill();
+        } else {
+            player.GetComponent<PlayerController>().magnetActive = true;
+        }
     }
 
     void Shield(GameObject player) {
-        player.GetComponent<PlayerController>().shieldActive = true;
-        GameObject.Find("ShieldPanel").GetComponent<ShieldPanel>().refillShield();
+        if (player.GetComponent<PlayerController>().shieldActive) {
+            GameObject.Find("ShieldPanel").GetComponent<ShieldPanel>().refillShield();
+        } else {
+            player.GetComponent<PlayerController>().shieldActive = true;
+        }
     }
 
     

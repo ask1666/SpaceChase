@@ -60,7 +60,7 @@ public class Shoot : MonoBehaviour {
             shootBtn.GetComponent<Button>().interactable = true;
         }
 
-        if (Input.touchCount == 1) // user is touching the screen with a single touch
+        if (Input.touchCount == 1 && !pause) // user is touching the screen with a single touch
         {
             Touch touch = Input.GetTouch(0); // get the touch
             if (touch.phase == TouchPhase.Began) //check for the first touch
@@ -130,7 +130,7 @@ public class Shoot : MonoBehaviour {
     }
 
     public void OnClick() {
-        if (gunCooldownTimer > gunCooldown && score.ammo > 0 && !pause) {
+        if (gunCooldownTimer > gunCooldown && score.ammo > 0) {
             StartCoroutine(doShoot());
             shoot = false;
             gunCooldownTimer = 0;

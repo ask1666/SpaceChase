@@ -60,14 +60,14 @@ public class PowerUpSpawner : MonoBehaviour {
                 }
             }
 
-            if (fuelTimer >= (JetPackBar.maxJetTime - 7)) {     //spawn fuel if jetpack is almost out of fuel. In other words if you can pick up ever fuel dropping, you will never run out of fuel.
-                GameObject powerupSpawned = Instantiate<GameObject>(powerUps[2], new Vector3(1.7f, 6.34f, 0), Quaternion.identity);
-                powerupSpawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(0, 8), ForceMode2D.Impulse);
-                powerupSpawned.transform.localScale = Vector3.one * Random.Range(1f, 1f);
-            }
-            
             timer = Time.deltaTime;
 
+        }
+        if (fuelTimer >= (JetPackBar.maxJetTime - 7)) {     //spawn fuel if jetpack is almost out of fuel. In other words if you can pick up ever fuel dropping, you will never run out of fuel.
+            GameObject powerupSpawned = Instantiate<GameObject>(powerUps[2], new Vector3(0, 6.34f, 0), Quaternion.identity);
+            powerupSpawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(0, 8), ForceMode2D.Impulse);
+            powerupSpawned.transform.localScale = Vector3.one * Random.Range(1f, 1f);
+            fuelTimer = 0;
         }
     }
 

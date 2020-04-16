@@ -28,7 +28,6 @@ public class Pause : MonoBehaviour
                 onClick();
             } else {
                 DoPause();
-                Debug.Log("doPause");
             }
         }
 
@@ -42,6 +41,7 @@ public class Pause : MonoBehaviour
         PlayerController.pause = true;
         SkyBoxScroll.pause = true;
         Score.pause = true;
+        EnemyBullet.pause = true;
         Time.timeScale = 0;
         continueButton.SetActive(true);
         mainMenuButton.SetActive(true);
@@ -56,6 +56,7 @@ public class Pause : MonoBehaviour
         PlayerController.pause = false;
         SkyBoxScroll.pause = false;
         Score.pause = false;
+        EnemyBullet.pause = false;
         continueButton.SetActive(false);
         mainMenuButton.SetActive(false);
         Time.timeScale = 1;
