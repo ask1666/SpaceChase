@@ -4840,7 +4840,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8711764592729568529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4355187730915641795}
@@ -4880,7 +4880,6 @@ MonoBehaviour:
   explosion: {fileID: 1926739716468166}
   graphic: {fileID: 4643502362956417782}
   sound: {fileID: 4222466838158965726}
-  speed: 0.018
 --- !u!50 &1060471827
 Rigidbody2D:
   serializedVersion: 4
