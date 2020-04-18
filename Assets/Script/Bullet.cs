@@ -10,10 +10,12 @@ public class Bullet : MonoBehaviour {
     public GameObject graphic;
     public bool explode;
     public float speed;
+    public static bool pause;
 
     // Start is called before the first frame update
     void Start() {
         explode = false;
+        pause = false;
     }
 
     // Update is called once per frame
@@ -21,7 +23,9 @@ public class Bullet : MonoBehaviour {
         if (!explode) {
             this.gameObject.transform.Translate(Vector2.up * bulletSpeed);
         } else {
-            this.gameObject.transform.Translate(Vector2.down * speed);
+            if (!pause) {
+                this.gameObject.transform.Translate(Vector2.down * speed);
+            }
         }
     }
 

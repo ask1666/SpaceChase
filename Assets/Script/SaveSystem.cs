@@ -16,7 +16,6 @@ public static class SaveSystem {
         string path = Application.persistentDataPath + "/player.txt";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-
         formatter.Serialize(stream, data);
         stream.Close();
     }

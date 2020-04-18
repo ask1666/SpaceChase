@@ -57,7 +57,7 @@ public class ObstacleExplosion : MonoBehaviour {
             collision.gameObject.GetComponent<AudioSource>().Play();
             collision.gameObject.GetComponent<Animator>().applyRootMotion = false;
             collision.gameObject.GetComponent<Animator>().SetTrigger("NoFuel");
-            StartCoroutine(killPlayer());
+            collision.gameObject.GetComponent<PlayerController>().StartCoroutine(killPlayer());
         } else if (this.gameObject.tag.Equals("Garbage") && collision.gameObject.tag.Equals("Player")) {
             collision.gameObject.GetComponent<AudioSource>().Play();
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
@@ -75,7 +75,6 @@ public class ObstacleExplosion : MonoBehaviour {
         UpgradesProperties UP = GameObject.Find("GameControl").GetComponent<UpgradesProperties>();
         PlayerData playerData = new PlayerData(score.highScore, UP.jetpackDuration, score.cash, UP.playerName, UP.movementSpeed, Score.startAmmo, UP.magnetTime, UP.shieldTime);
         SaveSystem.SavePlayerData(playerData);
-        Debug.Log("did it");
         SceneManager.LoadScene("DeathScreen");
         
     }

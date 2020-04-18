@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour {
     }
     void Update() {
         
-        if (SceneManager.GetActiveScene().name.Equals("Game") || SceneManager.GetActiveScene().name.Equals("Game2") || SceneManager.GetActiveScene().name.Equals("Game3") || SceneManager.GetActiveScene().name.Equals("MainGame")) {
+        if (SceneManager.GetActiveScene().name.Equals("MainGame")) {
             if (this.gameObject.transform.position.y <= -1.5f) {
                 this.gameObject.transform.Translate(Vector2.up * 0.001f);
             }
