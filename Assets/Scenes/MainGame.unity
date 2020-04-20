@@ -759,6 +759,7 @@ GameObject:
   - component: {fileID: 456027188}
   - component: {fileID: 456027187}
   - component: {fileID: 456027191}
+  - component: {fileID: 456027189}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -792,11 +793,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUps:
-  - {fileID: 8809135473831653650, guid: 612893e218db2fb489e77e29b4d11a9d, type: 3}
-  - {fileID: 7733736501450900756, guid: aa3cee3b00afe9240bee7648db7e0c4b, type: 3}
   - {fileID: 3411400897515378558, guid: 7ceb0649d1c15814aaca8068b25533f8, type: 3}
-  - {fileID: 8329017607275729997, guid: 54e17706fd7edf54ead9e6f948bfbe9b, type: 3}
+  - {fileID: 7733736501450900756, guid: aa3cee3b00afe9240bee7648db7e0c4b, type: 3}
   - {fileID: 1776392611544155845, guid: d2310a7c07f23ab4690afc7ac6051d68, type: 3}
+  - {fileID: 8329017607275729997, guid: 54e17706fd7edf54ead9e6f948bfbe9b, type: 3}
+  RareChance: 0.9
+  chances:
+  - 0.1
+  - 0.5
+  - 0.6
+  - 0.8
+  releaseCooldown: 5
+  dontSpawn: 1
+  minSpeed: 4
+  maxSpeed: 6
+  tt: 0.01
+--- !u!114 &456027189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456027186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6bc81aabd795048a86ffffbf4544be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 8809135473831653650, guid: 612893e218db2fb489e77e29b4d11a9d, type: 3}
   RareChance: 0.9
   chances:
   - 0.1
@@ -806,7 +831,7 @@ MonoBehaviour:
   releaseCooldown: 5
   dontSpawn: 1
   minSpeed: 2
-  maxSpeed: 6
+  maxSpeed: 4
   tt: 0.01
 --- !u!4 &456027190
 Transform:
@@ -6975,7 +7000,7 @@ PrefabInstance:
     - target: {fileID: 4454606121853482101, guid: 02d135394dfda4b4dbfa38be8c06084f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4454606121853482102, guid: 02d135394dfda4b4dbfa38be8c06084f,
         type: 3}
@@ -7582,7 +7607,7 @@ PrefabInstance:
     - target: {fileID: 7926430718052385778, guid: 20a228e5e2916e748afafbe410add183,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20a228e5e2916e748afafbe410add183, type: 3}

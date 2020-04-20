@@ -35,7 +35,7 @@ public class PowerUpSpawner : MonoBehaviour {
 
         if (timer > releaseCooldown) {
             if (Random.Range(0.0f, 1.0f) >= chances[3]) {
-                GameObject powerupSpawned = Instantiate<GameObject>(powerUps[2], new Vector3(positions[Random.Range(0,2)], 6.34f, 0), Quaternion.identity);
+                GameObject powerupSpawned = Instantiate<GameObject>(powerUps[0], new Vector3(positions[Random.Range(0, 2)], 6.34f, 0), Quaternion.identity);
                 powerupSpawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(0, 8), ForceMode2D.Impulse);
                 powerupSpawned.transform.localScale = Vector3.one * Random.Range(1f, 1f);
 
@@ -43,15 +43,7 @@ public class PowerUpSpawner : MonoBehaviour {
                     fuelTimer = 0;
                 }
             } else if (Random.Range(0.0f, 1.0f) >= chances[2]) {
-                GameObject powerupSpawned = Instantiate<GameObject>(powerUps[1], new Vector3(positions[Random.Range(0,2)], 6.34f, 0), Quaternion.identity);
-                powerupSpawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(0, 8), ForceMode2D.Impulse);
-                powerupSpawned.transform.localScale = Vector3.one * Random.Range(1f, 1f);
-
-                if (powerupSpawned.gameObject.tag.Equals("Fuel")) {
-                    fuelTimer = 0;
-                }
-            } else if (Random.Range(0.0f, 1.0f) >= chances[0]) {
-                GameObject powerupSpawned = Instantiate<GameObject>(powerUps[0], new Vector3(positions[Random.Range(0,2)], 6.34f, 0), Quaternion.identity);
+                GameObject powerupSpawned = Instantiate<GameObject>(powerUps[1], new Vector3(positions[Random.Range(0, 2)], 6.34f, 0), Quaternion.identity);
                 powerupSpawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(0, 8), ForceMode2D.Impulse);
                 powerupSpawned.transform.localScale = Vector3.one * Random.Range(1f, 1f);
 
@@ -60,17 +52,17 @@ public class PowerUpSpawner : MonoBehaviour {
                 }
             }
             if (Random.Range(0.0f, 1.0f) >= RareChance) {      //Shield or Magnet
-                GameObject powerupSpawned = Instantiate<GameObject>(powerUps[Random.Range(powerUps.Length-2, powerUps.Length)], new Vector3(positions[Random.Range(0, 2)], 6.34f, 0), Quaternion.identity);
+                GameObject powerupSpawned = Instantiate<GameObject>(powerUps[Random.Range(powerUps.Length - 2, powerUps.Length)], new Vector3(positions[Random.Range(0, 2)], 6.34f, 0), Quaternion.identity);
                 powerupSpawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(0, 8), ForceMode2D.Impulse);
                 powerupSpawned.transform.localScale = Vector3.one * Random.Range(1f, 1f);
 
             }
-            
+
             timer = Time.deltaTime;
 
         }
         if (fuelTimer >= (JetPackBar.maxJetTime - 7)) {     //spawn fuel if jetpack is almost out of fuel. In other words if you can pick up ever fuel dropping, you will never run out of fuel.
-            GameObject powerupSpawned = Instantiate<GameObject>(powerUps[2], new Vector3(0, 6.34f, 0), Quaternion.identity);
+            GameObject powerupSpawned = Instantiate<GameObject>(powerUps[0], new Vector3(0, 6.34f, 0), Quaternion.identity);
             powerupSpawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(0, 8), ForceMode2D.Impulse);
             powerupSpawned.transform.localScale = Vector3.one * Random.Range(1f, 1f);
             fuelTimer = 0;
