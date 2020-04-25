@@ -36,8 +36,7 @@ public class Score : MonoBehaviour {
 
         DontDestroyOnLoad(this.gameObject);
 
-        highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
-        cashText = GameObject.Find("CashText").GetComponent<TextMeshProUGUI>();
+        
         SaveSystem.LoadPlayerData();
 
     }
@@ -71,6 +70,8 @@ public class Score : MonoBehaviour {
             scoreText.text = "Score:\n" + Mathf.RoundToInt(score);
             EarnedCashNrText = GameObject.Find("EarnedCashNrText").GetComponent<TextMeshProUGUI>();
             EarnedCashNrText.text = "" + earnedCash;
+            cashText = GameObject.Find("CashText").GetComponent<TextMeshProUGUI>();
+            cashText.text = "Total Cash:\n" + cash;
             //timer = Time.deltaTime;
         } else if (scene.name.Equals("Controls")) {
             setText();
@@ -93,10 +94,16 @@ public class Score : MonoBehaviour {
     }
 
     public void setText() {
-        highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
-        cashText = GameObject.Find("CashText").GetComponent<TextMeshProUGUI>();
-        highScoreText.text = "HighScore:\n" + highScore;
-        cashText.text = "Cash:\n" + cash;
+        if (GameObject.Find("HighScoreText")) {
+            highScoreText = GameObject.Find("HighScoreText").GetComponent<TextMeshProUGUI>();
+            highScoreText.text = "HighScore:\n" + highScore;
+        }
+        if (GameObject.Find("CashText")) {
+            cashText = GameObject.Find("CashText").GetComponent<TextMeshProUGUI>();
+            cashText.text = "Cash:\n" + cash;
+        }
+        
+        
     }
 
 

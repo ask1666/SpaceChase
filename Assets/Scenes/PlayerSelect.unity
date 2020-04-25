@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86.84506, y: 610}
+  m_AnchoredPosition: {x: 86.84506, y: 602}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349063795
@@ -257,7 +257,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: Player select
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -326,7 +326,7 @@ MonoBehaviour:
   m_margin: {x: -540.53625, y: -66.02002, z: -264.07886, w: -226.94263}
   m_textInfo:
     textComponent: {fileID: 349063795}
-    characterCount: 9
+    characterCount: 13
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
@@ -5200,7 +5200,7 @@ Transform:
   m_GameObject: {fileID: 382935651}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.113, y: 800.64, z: 0}
-  m_LocalScale: {x: 58.3443, y: 107.199234, z: 37.044}
+  m_LocalScale: {x: 58.3443, y: 263.97812, z: 37.044}
   m_Children: []
   m_Father: {fileID: 594457096}
   m_RootOrder: 5
@@ -5999,7 +5999,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.227, y: 716}
+  m_AnchoredPosition: {x: -45, y: 700}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &967891056
@@ -6048,8 +6048,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 50.18
+  m_fontSizeBase: 50.18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6750,7 +6750,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 200 Highscore to unlock!
+  m_Text: 500 Highscore to unlock!
 --- !u!222 &1369858902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6827,7 +6827,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 500 Highscore to unlock!
+  m_Text: 1000 Highscore to unlock!
 --- !u!222 &1438081349
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7096,7 +7096,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1727403909
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7800,7 +7800,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1000 Highscore to unlock!
+  m_Text: 1500 Highscore to unlock!
 --- !u!222 &1954926447
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -33,6 +33,8 @@ public class UpgradesOnClick : MonoBehaviour {
     private bool magnetTimeMaxed;
     private bool shieldTimeMaxed;
 
+    public int price1, price2, price3, price4;
+
     private UpgradesProperties UP;
     private Score score;
 
@@ -115,16 +117,16 @@ public class UpgradesOnClick : MonoBehaviour {
     private void jetpackDurationHandler() {
         switch (UP.jetpackDuration) {
             case 30f:
-                jetpackDurationCost = 100;
+                jetpackDurationCost = price1;
                 break;
             case 35f:
-                jetpackDurationCost = 300;
+                jetpackDurationCost = price2;
                 break;
             case 40f:
-                jetpackDurationCost = 500;
+                jetpackDurationCost = price3;
                 break;
             case 45f:
-                jetpackDurationCost = 1000;
+                jetpackDurationCost = price4;
                 break;
             default:
                 jetPackMaxed = true;
@@ -141,16 +143,16 @@ public class UpgradesOnClick : MonoBehaviour {
     private void movementSpeedHandler() {
         switch (UP.movementSpeed) {
             case 5f:
-                movementSpeedCost = 100;
+                movementSpeedCost = price1;
                 break;
             case 6f:
-                movementSpeedCost = 300;
+                movementSpeedCost = price2;
                 break;
             case 7f:
-                movementSpeedCost = 500;
+                movementSpeedCost = price3;
                 break;
             case 8f:
-                movementSpeedCost = 1000;
+                movementSpeedCost = price4;
                 break;
             default:
                 movementSpeedMaxed = true;
@@ -169,16 +171,16 @@ public class UpgradesOnClick : MonoBehaviour {
     private void startAmmoHandler() {
         switch (Score.startAmmo) {
             case 5:
-                startAmmoCost = 100;
+                startAmmoCost = price1;
                 break;
             case 6:
-                startAmmoCost = 300;
+                startAmmoCost = price2;
                 break;
             case 7:
-                startAmmoCost = 500;
+                startAmmoCost = price3;
                 break;
             case 8:
-                startAmmoCost = 1000;
+                startAmmoCost = price4;
                 break;
             default:
                 jetPackMaxed = true;
@@ -195,16 +197,16 @@ public class UpgradesOnClick : MonoBehaviour {
     private void magnetTimeHandler() {
         switch (UP.magnetTime) {
             case 30f:
-                magnetTimeCost = 100;
+                magnetTimeCost = price1;
                 break;
             case 35f:
-                magnetTimeCost = 300;
+                magnetTimeCost = price2;
                 break;
             case 40f:
-                magnetTimeCost = 500;
+                magnetTimeCost = price3;
                 break;
             case 45f:
-                magnetTimeCost = 1000;
+                magnetTimeCost = price4;
                 break;
             default:
                 magnetTimeMaxed = true;
@@ -221,16 +223,16 @@ public class UpgradesOnClick : MonoBehaviour {
     private void shieldTimeHandler() {
         switch (UP.shieldTime) {
             case 5f:
-                shieldTimeCost = 100;
+                shieldTimeCost = price1;
                 break;
             case 7.5f:
-                shieldTimeCost = 300;
+                shieldTimeCost = price2;
                 break;
             case 10f:
-                shieldTimeCost = 500;
+                shieldTimeCost = price3;
                 break;
             case 12.5f:
-                shieldTimeCost = 1000;
+                shieldTimeCost = price4;
                 break;
             default:
                 shieldTimeMaxed = true;
