@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
         
         if (SceneManager.GetActiveScene().name.Equals("MainGame")) {
             if (this.gameObject.transform.position.y <= -1.5f) {
-                this.gameObject.transform.Translate(Vector2.up * 0.001f);
+                this.gameObject.transform.Translate(Vector2.up * 0.15f *Time.deltaTime);
             }
         }
 

@@ -16739,7 +16739,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Menu
+  m_text: Space chase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -16808,7 +16808,7 @@ MonoBehaviour:
   m_margin: {x: -540.53625, y: -66.02002, z: -264.07886, w: -226.94263}
   m_textInfo:
     textComponent: {fileID: 1511804059}
-    characterCount: 9
+    characterCount: 11
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
