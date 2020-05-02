@@ -17,6 +17,10 @@ public class SceneManage : MonoBehaviour {
             loadingScreen.SetActive(false);
         }
 
+        if (!GameObject.Find("GameControl")) {
+            SceneManager.LoadScene("MainMenu");
+        }
+
     }
 
     // Update is called once per frame

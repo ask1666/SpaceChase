@@ -52,9 +52,7 @@ public class PowerUpSpawner : MonoBehaviour {
                 }
             }
             if (Random.Range(0.0f, 1.0f) >= RareChance) {      //Shield or Magnet
-                GameObject powerupSpawned = Instantiate<GameObject>(powerUps[Random.Range(powerUps.Length - 2, powerUps.Length)], new Vector3(positions[Random.Range(0, 2)], 6.34f, 0), Quaternion.identity);
-                powerupSpawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(0, 8), ForceMode2D.Impulse);
-                powerupSpawned.transform.localScale = Vector3.one * Random.Range(1f, 1f);
+                StartCoroutine(spawnRare());
 
             }
 
@@ -67,6 +65,13 @@ public class PowerUpSpawner : MonoBehaviour {
             powerupSpawned.transform.localScale = Vector3.one * Random.Range(1f, 1f);
             fuelTimer = 0;
         }
+    }
+
+    IEnumerator spawnRare() {
+        yield return new WaitForSeconds(1.5f);
+        GameObject powerupSpawned = Instantiate<GameObject>(powerUps[Random.Range(powerUps.Length - 2, powerUps.Length)], new Vector3(positions[Random.Range(0, 2)], 6.34f, 0), Quaternion.identity);
+        powerupSpawned.GetComponent<Rigidbody2D>().AddTorque(Random.Range(0, 8), ForceMode2D.Impulse);
+        powerupSpawned.transform.localScale = Vector3.one * Random.Range(1f, 1f);
     }
 
 }
