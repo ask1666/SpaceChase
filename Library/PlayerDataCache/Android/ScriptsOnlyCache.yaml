@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - EnemyController
     - EnemyShoot
     - ExplosionOnTrigger
+    - GoogleMobileAds.Common.MobileAdsEventExecutor
     - Gun
     - IntroScript
     - JetPackBar
@@ -80,8 +81,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -1852,7 +1855,7 @@ ScriptsOnlyBuild:
     className: ShadowCaster2D
   - hash:
       serializedVersion: 2
-      Hash: 622f82687ffb950d04077043b9a75ea0
+      Hash: 7c18170e16c31d6970e80993854565c6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -2094,4 +2097,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Reset.unity
   - Assets/Scenes/Upgrades.unity
   - Assets/Scenes/Controls.unity
-  playerPath: C:/Users/geeky/Documents/UnityProjects/SpaceChase/build1.apk
+  playerPath: C:/Users/geeky/Documents/UnityProjects/SpaceChase/googleBuild1.01.aab

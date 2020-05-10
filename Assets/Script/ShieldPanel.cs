@@ -36,6 +36,7 @@ public class ShieldPanel : MonoBehaviour {
     }
 
     public void refillShield() {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().shieldTimer = 0;
         timer = Time.deltaTime;
     }
 }

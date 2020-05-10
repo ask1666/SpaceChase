@@ -37,6 +37,7 @@ public class MagnetBarPanel : MonoBehaviour {
     }
 
     public void magnetRefill() {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().magnetTimer = 0;
         timer = Time.deltaTime;
     }
 }

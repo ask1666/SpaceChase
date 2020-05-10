@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject shield, magnet;
     public float step;
 
-    private float magnetTimer, shieldTimer;
+    public float magnetTimer, shieldTimer;
     public static float magnetTime, shieldTime;
     public static bool pause;
     private float startMovePos;
@@ -141,9 +141,9 @@ public class PlayerController : MonoBehaviour {
             }
             
         } else {
-            magnetActive = false;
             magnetTimer = 0;
             MagnetBarPanel.magnetActive = false;
+            magnetActive = false;
         }
     }
 
@@ -156,9 +156,9 @@ public class PlayerController : MonoBehaviour {
             GetComponent<Collider2D>().enabled = false;
             
         } else {
-            shieldActive = false;
             shieldTimer = 0;
             ShieldPanel.shieldActive = false;
+            shieldActive = false;
         }
     }
 
