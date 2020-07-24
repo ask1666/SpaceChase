@@ -13,3 +13,5 @@ helst, når som helst kan spille. At spillet skal være så intuitivt og enkelt 
 fleste kan begynne å spille med en gang uten å tenke seg om. Målet er at det skal være
 behagelig nok å spille at du ikke trenger å tenke deg om noe særlig hver gang du rører
 skjermen.
+
+*To download go to [SpaceChase](https://play.google.com/store/apps/details?id=com.AsbjrnFrostad.SpaceChase)*
